@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Why Early Childhood Education Matters",
+    "excerpt": "A deep dive into why focusing on holistic early education forms the bedrock of a child's character and limits lifelong issues.",
+    "date": "2026-03-01",
+    "author": "Principal",
+    "image": "https://images.unsplash.com/photo-1544256718-3b624d34af10?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": 2,
+    "title": "Welcome to the New Academic Year!",
+    "excerpt": "We are thrilled to welcome our students back to campus. Here's everything you need to know about the upcoming classes.",
+    "date": "2026-02-15",
+    "author": "Admin",
+    "image": "https://images.unsplash.com/photo-1577896851231-70ef18881754?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": 3,
+    "title": "5 Ways to Help Your Child with Homework",
+    "excerpt": "Expert tips on how parents can create a conducive learning environment at home without hovering over their kids' shoulders.",
+    "date": "2026-01-28",
+    "author": "Mrs. Priya (Teacher)",
+    "image": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+  }
+]

@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors from BE MAX Logo: Deep Blue and Red */
+  --color-brand-blue: #1a3673; 
+  --color-brand-red: #e31837;
+  --color-brand-dark: #0f172a;
+  --font-sans: 'Inter', 'Roboto', sans-serif;
+}
+
+@layer base {
+  body {
+    @apply font-sans antialiased text-slate-800 bg-slate-50;
+  }
+}
