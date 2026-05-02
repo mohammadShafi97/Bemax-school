@@ -1,6 +1,6 @@
 "use client";
 
-import Hero from "@/components/ui/Hero";
+import PageHeader from "@/components/ui/PageHeader";
 import Section from "@/components/ui/Section";
 import AnimatedCard from "@/components/ui/AnimatedCard";
 import { FiTarget, FiAward, FiBookOpen, FiGlobe, FiUsers } from "react-icons/fi";
@@ -9,7 +9,8 @@ import Image from "next/image";
 export default function AboutPage() {
   return (
     <div className="overflow-hidden">
-      <Hero
+      <PageHeader
+        imagePath="/hero-2.jpg"
         title={"A Legacy of Excellence.\nWe Are BE MAX."}
         subtitle="BE MAX Kids & Public School is a pioneering venture of the prestigious BE MAX Group of Institutions, renowned for its commitment to academic excellence in India."
       />

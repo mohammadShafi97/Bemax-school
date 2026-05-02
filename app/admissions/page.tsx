@@ -1,6 +1,6 @@
 "use client";
 
-import Hero from "@/components/ui/Hero";
+import PageHeader from "@/components/ui/PageHeader";
 import Section from "@/components/ui/Section";
 import AnimatedCard from "@/components/ui/AnimatedCard";
 import { FiMapPin, FiCalendar, FiCheckCircle, FiAward, FiPhoneCall } from "react-icons/fi";
@@ -10,7 +10,8 @@ import { motion } from "framer-motion";
 export default function AdmissionsPage() {
   return (
     <div className="overflow-hidden">
-      <Hero
+      <PageHeader
+        imagePath="/tree.webp"
         title={"Welcome to the\nBE MAX Family."}
         subtitle="Step into a world of unparalleled education, where joy, technology, and holistic growth come together. We invite students from all backgrounds to join a community that celebrates every child's unique potential."
         primaryAction={{ text: "Apply Online Now", href: "#apply" }}

@@ -1,6 +1,6 @@
 "use client";
 
-import Hero from "@/components/ui/Hero";
+import PageHeader from "@/components/ui/PageHeader";
 import Section from "@/components/ui/Section";
 import AnimatedCard from "@/components/ui/AnimatedCard";
 import { FiCpu, FiMonitor, FiCode, FiBook, FiGlobe, FiSmile, FiBookOpen } from "react-icons/fi";
@@ -9,7 +9,8 @@ import Link from "next/link";
 export default function AcademicsPage() {
   return (
     <div className="overflow-hidden">
-      <Hero
+      <PageHeader
+        imagePath="/smart.jpg"
         title={"Future-Ready Learning,\nPowered by Joy."}
         subtitle="At BE MAX Public School, we don't just teach the syllabus; we prepare students for the digital world. Experience a stress-free, student-centered curriculum that blends traditional academic rigor with futuristic Artificial Intelligence."
         primaryAction={{ text: "Apply for Admissions", href: "/admissions" }}

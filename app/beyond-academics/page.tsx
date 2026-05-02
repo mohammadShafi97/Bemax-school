@@ -1,6 +1,6 @@
 "use client";
 
-import Hero from "@/components/ui/Hero";
+import PageHeader from "@/components/ui/PageHeader";
 import Section from "@/components/ui/Section";
 import AnimatedCard from "@/components/ui/AnimatedCard";
 import { FiRadio, FiSmile, FiMusic, FiHeart, FiActivity } from "react-icons/fi";
@@ -9,7 +9,8 @@ import Link from "next/link";
 export default function BeyondAcademicsPage() {
   return (
     <div className="overflow-hidden">
-      <Hero
+      <PageHeader
+        imagePath="/arts.jpg"
         title={"Where Every Child\nTakes the Spotlight."}
         subtitle="At BE MAX Kids & Public School, we believe that learning is more than academic achievement. With our commitment to 100% student participation, we ensure every child discovers their unique passions outside the traditional classroom."
         primaryAction={{ text: "Book a Campus Tour", href: "/contact" }}

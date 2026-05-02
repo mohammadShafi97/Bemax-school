@@ -1,6 +1,6 @@
 "use client";
 
-import Hero from "@/components/ui/Hero";
+import PageHeader from "@/components/ui/PageHeader";
 import Section from "@/components/ui/Section";
 import AnimatedCard from "@/components/ui/AnimatedCard";
 import { FiHeart, FiUserCheck, FiShield, FiSmile, FiActivity } from "react-icons/fi";
@@ -9,7 +9,8 @@ import Link from "next/link";
 export default function StudentSupportPage() {
   return (
     <div className="overflow-hidden">
-      <Hero
+      <PageHeader
+        imagePath="/mat.jpg"
         title={"A Safe Haven for\nGrowth and Well-Being."}
         subtitle="At BE MAX Kids & Public School, we understand that a child must feel safe, supported, and understood in order to truly thrive. We are deeply committed to providing an inclusive environment equipped with comprehensive health, emotional, and academic support systems."
       />

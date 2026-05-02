@@ -1,6 +1,6 @@
 "use client";
 
-import Hero from "@/components/ui/Hero";
+import PageHeader from "@/components/ui/PageHeader";
 import Section from "@/components/ui/Section";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -56,7 +56,8 @@ export default function GalleryPage() {
 
   return (
     <div className="overflow-hidden">
-      <Hero
+      <PageHeader
+        imagePath="/express.JPG"
         title={"Glimpses of a Joyful\nLearning Journey."}
         subtitle="Explore visual proof of the vibrant, high-tech, and joyful life at BE MAX Kids & Public School."
       />

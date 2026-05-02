@@ -1,6 +1,6 @@
 "use client";
 
-import Hero from "@/components/ui/Hero";
+import PageHeader from "@/components/ui/PageHeader";
 import Section from "@/components/ui/Section";
 import AnimatedCard from "@/components/ui/AnimatedCard";
 import { FiMapPin, FiPhone, FiMail, FiClock, FiAward } from "react-icons/fi";
@@ -23,7 +23,8 @@ export default function ContactPage() {
 
   return (
     <div className="overflow-hidden">
-      <Hero
+      <PageHeader
+        imagePath="/hero-3.jpg"
         title={"We're Here to\nAssist You."}
         subtitle="Whether you have questions about our stress-free academic curriculum, want to see the BE MAX Express in person, or need details about our upcoming mega-campus in Kottiyam, our team is ready to help."
       />
