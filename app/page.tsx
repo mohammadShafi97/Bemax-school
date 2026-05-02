@@ -296,7 +296,7 @@ export default function Home() {
               className="absolute top-[5%] left-0 w-[55%] h-[45%] rounded-3xl overflow-hidden shadow-2xl border-4 border-white hover:z-50 hover:scale-[1.03] transition-all duration-300 z-10 cursor-pointer bg-slate-100"
             >
               <Image
-                src="/tree.png"
+                src="/tree.webp"
                 alt="Talking Tree"
                 fill
                 className="object-cover"
@@ -307,7 +307,7 @@ export default function Home() {
               className="absolute top-[30%] right-0 w-[55%] h-[45%] rounded-3xl overflow-hidden shadow-2xl border-4 border-white hover:z-50 hover:scale-[1.03] transition-all duration-300 z-20 cursor-pointer bg-slate-100"
             >
               <Image
-                src="/smart.png"
+                src="/smart.jpg"
                 alt="Smart Classroom"
                 fill
                 className="object-cover"
@@ -318,7 +318,7 @@ export default function Home() {
               className="absolute bottom-[5%] left-[10%] w-[55%] h-[45%] rounded-3xl overflow-hidden shadow-2xl border-4 border-white hover:z-50 hover:scale-[1.03] transition-all duration-300 z-30 cursor-pointer bg-slate-100"
             >
               <Image
-                src="/mat.png"
+                src="/mat.jpg"
                 alt="Magik Mat"
                 fill
                 className="object-cover"
@@ -367,7 +367,7 @@ export default function Home() {
           >
             <div className="h-64 md:h-72 relative overflow-hidden bg-slate-100">
               <Image
-                src="/fm.png"
+                src="/fm.jpg"
                 alt="School FM"
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-110"
@@ -391,7 +391,7 @@ export default function Home() {
           >
             <div className="h-64 md:h-72 relative overflow-hidden bg-slate-100">
               <Image
-                src="/arts.png"
+                src="/arts.jpg"
                 alt="Arts & Sports"
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-110"
@@ -512,7 +512,7 @@ export default function Home() {
       {/* SECTION 8: INCLUSION & SUPPORT SERVICES */}
       <Section
         bg="slate"
-        className="relative overflow-hidden bg-cover bg-no-repeat bg-left"
+        className="relative overflow-hidden bg-cover bg-no-repeat md:bg-left bg-top-left"
         style={{
           backgroundImage: 'url("/last.png")',
           transition: "background-image 1s ease-in-out",
