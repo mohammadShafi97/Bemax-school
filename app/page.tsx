@@ -39,8 +39,23 @@ export default function Home() {
       />
 
       {/* SECTION 2: THE TRUST & LEGACY BAR */}
-      <div className="bg-white md:px-[100px] py-12 border-b border-slate-100 shadow-sm relative z-20">
+      <div className="bg-white md:px-[100px] py-16 md:py-20 border-b border-slate-100 shadow-sm relative z-20">
         <div className="max-w-400 mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12 md:mb-16"
+          >
+            <h2 className="text-3xl md:text-5xl font-black mb-6 text-slate-900">
+              The Bemax <span className="text-accent">Legacy</span>
+            </h2>
+            <p className="text-lg md:text-xl max-w-3xl mx-auto text-slate-600">
+              A decade of shaping futures, building character, and empowering global citizens through exceptional educational experiences.
+            </p>
+          </motion.div>
+
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -213,6 +228,101 @@ export default function Home() {
               highlight social responsibility and family relationships, shaping
               compassionate global citizens.
             </p>
+          </AnimatedCard>
+        </div>
+      </Section>
+
+      {/* SECTION 3.5: WHY US */}
+      <Section
+        kicker="WHY US"
+        title="Unlocking Every Child's Unique Genius"
+        subtitle="Because your child is an individual, not just a roll number. Discover our student-centered approach to holistic growth."
+        bg="white"
+        className="md:px-[100px]"
+      >
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <AnimatedCard delay={0.1} hoverEffect="scale" className="border-t-4 border-t-primary-500">
+            <h3 className="text-xl md:text-2xl font-bold mb-6 text-slate-900 flex items-center gap-3">
+              <span className="w-12 h-12 rounded-full bg-primary-100 text-primary-600 flex items-center justify-center text-xl shrink-0">
+                <FiActivity />
+              </span>
+              "Stress-Free" & Activity-Oriented
+            </h3>
+            <div className="space-y-4">
+              <div>
+                <h4 className="font-bold text-slate-800 text-sm">The "Light-Bag" Promise</h4>
+                <p className="text-slate-600 text-sm mt-1 leading-relaxed">We believe a child's shoulders should carry dreams, not heavy textbooks. Our digital integration and activity-based models mean lighter backpacks and more energy for actual learning.</p>
+              </div>
+              <div>
+                <h4 className="font-bold text-slate-800 text-sm">No-Homework Weekends</h4>
+                <p className="text-slate-600 text-sm mt-1 leading-relaxed">Weekends are for family, rest, and play. All core academic reinforcement happens during our dedicated weekday school hours.</p>
+              </div>
+              <div>
+                <h4 className="font-bold text-slate-800 text-sm">Experiential Learning Zones</h4>
+                <p className="text-slate-600 text-sm mt-1 leading-relaxed">We replace rote memorization with "learning by doing." Whether it's planting seeds in a garden or building shapes in the Maths Lab, concepts are experienced physically before they are read in a book.</p>
+              </div>
+            </div>
+          </AnimatedCard>
+
+          <AnimatedCard delay={0.2} hoverEffect="scale" className="border-t-4 border-t-accent">
+            <h3 className="text-xl md:text-2xl font-bold mb-6 text-slate-900 flex items-center gap-3">
+              <span className="w-12 h-12 rounded-full bg-accent/10 text-accent flex items-center justify-center text-xl shrink-0">
+                <FiUsers />
+              </span>
+              "Student-Centered" Approach
+            </h3>
+            <div className="space-y-4">
+              <div>
+                <h4 className="font-bold text-slate-800 text-sm">Multiple Intelligences Mapping</h4>
+                <p className="text-slate-600 text-sm mt-1 leading-relaxed">Not every child learns the same way. We actively identify whether your child is a visual, auditory, or kinesthetic (hands-on) learner, adapting our teaching styles to their natural strengths.</p>
+              </div>
+              <div>
+                <h4 className="font-bold text-slate-800 text-sm">Growth Portfolios</h4>
+                <p className="text-slate-600 text-sm mt-1 leading-relaxed">Instead of just a sheet of grades, we build a continuous portfolio of your child’s creative projects, speaking milestones, and personal victories to track their true holistic growth.</p>
+              </div>
+            </div>
+          </AnimatedCard>
+
+          <AnimatedCard delay={0.3} hoverEffect="scale" className="border-t-4 border-t-primary-500">
+            <h3 className="text-xl md:text-2xl font-bold mb-6 text-slate-900 flex items-center gap-3">
+              <span className="w-12 h-12 rounded-full bg-primary-100 text-primary-600 flex items-center justify-center text-xl shrink-0">
+                <FiCheckCircle />
+              </span>
+              "100% Participation" Guarantee
+            </h3>
+            <div className="space-y-4">
+              <div>
+                <h4 className="font-bold text-slate-800 text-sm">The "No-Bench" Sports Policy</h4>
+                <p className="text-slate-600 text-sm mt-1 leading-relaxed">At BE MAX, there is no "A-team" that plays while others watch. Every single child gets active field time to build sportsmanship, teamwork, and physical fitness.</p>
+              </div>
+              <div>
+                <h4 className="font-bold text-slate-800 text-sm">CCA Discovery Rotation</h4>
+                <p className="text-slate-600 text-sm mt-1 leading-relaxed">Unsure what your child is naturally good at? Our Co-Curricular Activity (CCA) rotation ensures every student tries their hand at music, drama, sports, and arts before specializing in what they love most.</p>
+              </div>
+            </div>
+          </AnimatedCard>
+
+          <AnimatedCard delay={0.4} hoverEffect="scale" className="border-t-4 border-t-accent">
+            <h3 className="text-xl md:text-2xl font-bold mb-6 text-slate-900 flex items-center gap-3">
+              <span className="w-12 h-12 rounded-full bg-accent/10 text-accent flex items-center justify-center text-xl shrink-0">
+                <FiGlobe />
+              </span>
+              The BE MAX Legacy
+            </h3>
+            <div className="space-y-4">
+              <div>
+                <h4 className="font-bold text-slate-800 text-sm">"Mini-TED" Public Speaking</h4>
+                <p className="text-slate-600 text-sm mt-1 leading-relaxed">We train students to conquer stage fright early. From presenting morning assemblies to hosting debates, we build fearless public speakers.</p>
+              </div>
+              <div>
+                <h4 className="font-bold text-slate-800 text-sm">Immersive Language Zones</h4>
+                <p className="text-slate-600 text-sm mt-1 leading-relaxed">Leveraging our legacy as India’s leading language experts, our campus features English-immersion activities where students naturally converse and think in English, rather than just studying it as a subject.</p>
+              </div>
+              <div>
+                <h4 className="font-bold text-slate-800 text-sm">Real-World Broadcasting</h4>
+                <p className="text-slate-600 text-sm mt-1 leading-relaxed">Utilizing our School FM Radio, students practice their communication skills by writing scripts, hosting interviews, and broadcasting to the campus—turning language learning into a thrilling real-world experience.</p>
+              </div>
+            </div>
           </AnimatedCard>
         </div>
       </Section>

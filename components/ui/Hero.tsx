@@ -26,6 +26,8 @@ const Hero = ({
     'url("/hero-1.jpg")',
     'url("/hero-2.jpg")',
     'url("/hero-3.jpg")',
+    'url("/hero-4.jpg")',
+    'url("/hero-5.jpg")',
   ];
   const [activeIndex, setActiveIndex] = useState(0);
   useEffect(() => {
