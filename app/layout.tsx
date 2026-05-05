@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import FloatingContact from "@/components/FloatingContact";
 
 export const metadata: Metadata = {
   title: "BE MAX KIDS & PUBLIC SCHOOL",
@@ -19,6 +20,7 @@ export default function RootLayout({
         <Navbar />
         <main className="grow">{children}</main>
         <Footer />
+        <FloatingContact />
       </body>
     </html>
   );
