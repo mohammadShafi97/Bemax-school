@@ -17,32 +17,33 @@ type MediaItem = {
 
 const galleryData: MediaItem[] = [
   // Innovation & AI
-  { id: 1, type: "image", src: "/images/placeholders/tree.jpg", category: "Innovation & AI", caption: "My Talking Tree interacting with students." },
-  { id: 2, type: "image", src: "/images/placeholders/mat.jpg", category: "Innovation & AI", caption: "Students learning through movement on the Magik Mat." },
-  { id: 3, type: "image", src: "/images/placeholders/smart.jpg", category: "Innovation & AI", caption: "Interactive sessions in our Smart Classrooms." },
+  { id: 1, type: "image", src: "/tree.webp", category: "Innovation & AI", caption: "My Talking Tree interacting with students." },
+  { id: 2, type: "image", src: "/mat.jpg", category: "Innovation & AI", caption: "Students learning through movement on the Magik Mat." },
+  { id: 3, type: "image", src: "/smart.jpg", category: "Innovation & AI", caption: "Interactive sessions in our Smart Classrooms." },
   
   // Campus Life
-  { id: 4, type: "video", src: "/videos/placeholders/train.mp4", category: "Campus Life", caption: "The BE MAX Express in action!" },
-  { id: 5, type: "image", src: "/images/placeholders/park.jpg", category: "Campus Life", caption: "Kids enjoying the modern Kids Park." },
-  { id: 6, type: "image", src: "/images/placeholders/radio.jpg", category: "Campus Life", caption: "Behind-the-scenes at School FM Radio." },
+  { id: 4, type: "image", src: "/express.JPG", category: "Campus Life", caption: "The BE MAX Express in action!" },
+  { id: 5, type: "image", src: "/hero-1.jpg", category: "Campus Life", caption: "Vibrant campus life and modern facilities." },
+  { id: 6, type: "image", src: "/fm.jpg", category: "Campus Life", caption: "Engaging with School FM Radio." },
 
   // Academics
-  { id: 7, type: "image", src: "/images/placeholders/class.jpg", category: "Academics", caption: "Hands-on projects and group discussions." },
-  { id: 8, type: "image", src: "/images/placeholders/lang.jpg", category: "Academics", caption: "Individualized language lab sessions." },
-  { id: 9, type: "image", src: "/images/placeholders/library.jpg", category: "Academics", caption: "Exploring the International Library." },
+  { id: 7, type: "image", src: "/hero-2.jpg", category: "Academics", caption: "Focused academic excellence." },
+  { id: 8, type: "image", src: "/hero-3.jpg", category: "Academics", caption: "Individualized learning experiences." },
+  { id: 9, type: "image", src: "/hero-5.jpg", category: "Academics", caption: "Interactive and joyful learning environment." },
 
   // Extracurriculars
-  { id: 10, type: "image", src: "/images/placeholders/sports.jpg", category: "Extracurriculars", caption: "Horse riding and skating sessions." },
-  { id: 11, type: "image", src: "/images/placeholders/dance.jpg", category: "Extracurriculars", caption: "Dance performances and music classes." },
-  { id: 12, type: "image", src: "/images/placeholders/club.jpg", category: "Extracurriculars", caption: "Drama Club rehearsals in progress." },
+  { id: 10, type: "image", src: "/activity.jpg", category: "Extracurriculars", caption: "Exciting extracurricular activities." },
+  { id: 11, type: "image", src: "/dance.jpg", category: "Extracurriculars", caption: "Dance performances and cultural events." },
+  { id: 12, type: "image", src: "/drama.jpg", category: "Extracurriculars", caption: "Drama and theatrical arts." },
+  { id: 13, type: "image", src: "/arts.jpg", category: "Extracurriculars", caption: "Arts and creative expression." },
+  { id: 14, type: "image", src: "/drawing.jpg", category: "Extracurriculars", caption: "Drawing and painting sessions." },
+  { id: 15, type: "image", src: "/music.jpg", category: "Extracurriculars", caption: "Music classes and vocal training." },
 
   // Health
-  { id: 13, type: "image", src: "/images/placeholders/health.jpg", category: "Health & Safety", caption: "Periodical check-ups by our school nurse." },
-  { id: 14, type: "image", src: "/images/placeholders/bus.jpg", category: "Health & Safety", caption: "Secure transport fleet serving a 15km radius." },
-  { id: 15, type: "image", src: "/images/placeholders/ida.jpg", category: "Health & Safety", caption: "Proud members of IDA LEAP." },
+  { id: 16, type: "image", src: "/councelling.jpg", category: "Health & Safety", caption: "Student counselling and overall well-being." },
 ];
 
-const categories = ["All", "Innovation & AI", "Campus Life", "Academics", "Extracurriculars", "Health & Safety", "Videos"];
+const categories = ["All", "Innovation & AI", "Campus Life", "Academics", "Extracurriculars", "Health & Safety"];
 
 export default function GalleryPage() {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -94,9 +95,11 @@ export default function GalleryPage() {
                 className="group relative aspect-square bg-slate-200 rounded-2xl overflow-hidden cursor-pointer"
                 onClick={() => setSelectedMedia(item)}
               >
-                {/* Placeholder visual */}
+                {/* Visual */}
                 <div className="absolute inset-0 flex items-center justify-center text-slate-400 bg-slate-200 group-hover:scale-105 transition-transform duration-500">
-                  {item.type === "video" ? <FiPlay size={48} /> : <span>[ Image: {item.category} ]</span>}
+                  {item.type === "video" ? <FiPlay size={48} /> : (
+                    <Image src={item.src} alt={item.caption} fill className="object-cover" />
+                  )}
                 </div>
                 
                 {/* Overlay */}
@@ -140,9 +143,7 @@ export default function GalleryPage() {
                    <p>[ Video Player Placeholder for: {selectedMedia.src} ]</p>
                 </div>
               ) : (
-                <div className="w-full h-full flex flex-col items-center justify-center text-white/50">
-                   <p>[ Full Resolution Image Placeholder for: {selectedMedia.src} ]</p>
-                </div>
+                <Image src={selectedMedia.src} alt={selectedMedia.caption} fill className="object-contain" />
               )}
               
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">

@@ -249,7 +249,15 @@ export default function ContactPage() {
             Find Us on the Map
           </h3>
           <div className="w-full h-[400px] bg-slate-200 rounded-[2rem] overflow-hidden flex items-center justify-center text-slate-500 shadow-inner">
-            [ Embedded Google Maps Placeholder for Mevaram, Kollam ]
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3942.1494616176296!2d76.64403077425028!3d8.865674791525738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05e30007a47d13%3A0xf194389003fb4da0!2sBemax%20public%20school%20%26%20kids%20%7C%20Best%20School%20In%20Kollam!5e0!3m2!1sen!2sin!4v1777987807990!5m2!1sen!2sin"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen={true}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
           <p className="text-center text-slate-600 mt-6 max-w-2xl mx-auto italic text-sm">
             Directions: We are conveniently located at Mevaram, easily
