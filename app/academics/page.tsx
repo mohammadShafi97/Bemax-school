@@ -13,6 +13,7 @@ import {
   FiBookOpen,
 } from "react-icons/fi";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function AcademicsPage() {
   return (
@@ -164,8 +165,13 @@ export default function AcademicsPage() {
               </div>
             </div>
           </div>
-          <div className="h-[500px] bg-slate-200 rounded-2xl flex items-center justify-center text-slate-400">
-            [ Activity Learning Image ]
+          <div className="h-[500px] bg-slate-200 overflow-hidden relative rounded-2xl flex items-center justify-center text-slate-400">
+            <Image
+              src="/activity.jpg"
+              alt="Smart Ecosystem"
+              fill
+              className="object-cover object-center"
+            />
           </div>
         </div>
       </Section>
