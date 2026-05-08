@@ -16,6 +16,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
+import CountUp from "react-countup";
 
 export default function Home() {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -24,9 +25,12 @@ export default function Home() {
     offset: ["start end", "end start"],
   });
 
-  const y1 = useTransform(scrollYProgress, [0, 1], [100, -100]);
-  const y2 = useTransform(scrollYProgress, [0, 1], [-100, 100]);
-  const y3 = useTransform(scrollYProgress, [0, 1], [50, -150]);
+  const y1 = useTransform(scrollYProgress, [0, 1], [40, -40]);
+  const y2 = useTransform(scrollYProgress, [0, 1], [-30, 30]);
+  const y3 = useTransform(scrollYProgress, [0, 1], [20, -20]);
+  const y4 = useTransform(scrollYProgress, [0, 1], [-40, 40]);
+  const y5 = useTransform(scrollYProgress, [0, 1], [30, -30]);
+  const y6 = useTransform(scrollYProgress, [0, 1], [-20, 20]);
 
   return (
     <div className="overflow-hidden">
@@ -49,10 +53,11 @@ export default function Home() {
             className="text-center mb-12 md:mb-16"
           >
             <h2 className="text-3xl md:text-5xl font-black mb-6 text-slate-900">
-              The Bemax <span className="text-accent">Legacy</span>
+              The BE MAX <span className="text-accent">Legacy</span>
             </h2>
             <p className="text-lg md:text-xl max-w-3xl mx-auto text-slate-600">
-              A decade of shaping futures, building character, and empowering global citizens through exceptional educational experiences.
+              A decade of shaping futures, building character, and empowering
+              global citizens through exceptional educational experiences.
             </p>
           </motion.div>
 
@@ -63,7 +68,9 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
             >
-              <div className="text-4xl font-black text-accent mb-2">12+</div>
+              <div className="text-4xl font-black text-accent mb-2">
+                <CountUp end={12} suffix="+" enableScrollSpy scrollSpyOnce />
+              </div>
               <div className="text-sm font-semibold text-slate-600">
                 Years of Educational Excellence
               </div>
@@ -74,7 +81,9 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
             >
-              <div className="text-4xl font-black text-accent mb-2">100k+</div>
+              <div className="text-4xl font-black text-accent mb-2">
+                <CountUp end={100} suffix="k+" enableScrollSpy scrollSpyOnce />
+              </div>
               <div className="text-sm font-semibold text-slate-600">
                 Students Nurtured Globally
               </div>
@@ -99,7 +108,7 @@ export default function Home() {
               transition={{ delay: 0.4 }}
             >
               <div className="text-4xl font-black text-primary-600 mb-2">
-                7+
+                <CountUp end={7} suffix="+" enableScrollSpy scrollSpyOnce />
               </div>
               <div className="text-sm font-semibold text-slate-600">
                 Global Partnerships
@@ -117,49 +126,49 @@ export default function Home() {
                 alt="Cambridge University Press"
                 width={180}
                 height={60}
-                className="h-10 md:h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all"
+                className="h-10 md:h-16 w-auto object-contain  transition-all"
               />
               <Image
                 src="/idp.png"
                 alt="IDP Australia"
                 width={150}
                 height={60}
-                className="h-10 md:h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all"
+                className="h-10 md:h-16 w-auto object-contain  transition-all"
               />
               <Image
                 src="/bc.png"
                 alt="British Council"
                 width={180}
                 height={60}
-                className="h-10 md:h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all"
+                className="h-10 md:h-16 w-auto object-contain  transition-all"
               />
               <Image
                 src="/pte.png"
                 alt="Pearson PTE"
                 width={150}
                 height={60}
-                className="h-10 md:h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all"
+                className="h-10 md:h-16 w-auto object-contain  transition-all"
               />
               <Image
                 src="/toefl.jpg"
                 alt="TOEFL"
                 width={150}
                 height={60}
-                className="h-10 md:h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all"
+                className="h-10 md:h-16 w-auto object-contain  transition-all"
               />
               <Image
                 src="/cert.png"
                 alt="LanguageCert"
                 width={180}
                 height={60}
-                className="h-10 md:h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all"
+                className="h-10 md:h-16 w-auto object-contain  transition-all"
               />
               <Image
                 src="/oet.png"
                 alt="OET"
                 width={120}
                 height={60}
-                className="h-10 md:h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all"
+                className="h-10 md:h-16 w-auto object-contain  transition-all"
               />
             </div>
           </div>
@@ -168,13 +177,17 @@ export default function Home() {
 
       {/* SECTION 3: THE 4 PILLARS OF BE MAX */}
       <Section
-        title="Discover the BEMAX Advantage"
+        title="Discover the BE MAX Advantage"
         subtitle="Our core foundation is built upon four distinctive pillars that ensure your child receives an unparalleled, future-ready education."
         bg="slate"
         className="md:px-[100px]"
       >
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <AnimatedCard delay={0.1} hoverEffect="tiltRight">
+          <AnimatedCard
+            delay={0.1}
+            hoverEffect="tiltRight"
+            className="hover:bg-blue-200"
+          >
             <div className="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center text-primary-600 mb-6">
               <FiBook size={32} />
             </div>
@@ -188,7 +201,11 @@ export default function Home() {
             </p>
           </AnimatedCard>
 
-          <AnimatedCard delay={0.2} hoverEffect="tiltRight">
+          <AnimatedCard
+            delay={0.2}
+            hoverEffect="tiltRight"
+            className="hover:bg-red-200"
+          >
             <div className="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center text-accent mb-6">
               <FiGlobe size={32} />
             </div>
@@ -202,7 +219,11 @@ export default function Home() {
             </p>
           </AnimatedCard>
 
-          <AnimatedCard delay={0.3} hoverEffect="tiltRight">
+          <AnimatedCard
+            delay={0.3}
+            hoverEffect="tiltRight"
+            className="hover:bg-blue-200"
+          >
             <div className="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center text-primary-600 mb-6">
               <FiActivity size={32} />
             </div>
@@ -216,7 +237,11 @@ export default function Home() {
             </p>
           </AnimatedCard>
 
-          <AnimatedCard delay={0.4} hoverEffect="tiltRight">
+          <AnimatedCard
+            delay={0.4}
+            hoverEffect="tiltRight"
+            className="hover:bg-red-200"
+          >
             <div className="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center text-accent mb-6">
               <FiHeart size={32} />
             </div>
@@ -241,7 +266,11 @@ export default function Home() {
         className="md:px-[100px]"
       >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <AnimatedCard delay={0.1} hoverEffect="scale" className="border-t-4 border-t-primary-500">
+          <AnimatedCard
+            delay={0.1}
+            hoverEffect="scale"
+            className="border-t-4 border-t-primary-500 hover:bg-blue-200"
+          >
             <h3 className="text-xl md:text-2xl font-bold mb-6 text-slate-900 flex items-center gap-3">
               <span className="w-12 h-12 rounded-full bg-primary-100 text-primary-600 flex items-center justify-center text-xl shrink-0">
                 <FiActivity />
@@ -250,21 +279,44 @@ export default function Home() {
             </h3>
             <div className="space-y-4">
               <div>
-                <h4 className="font-bold text-slate-800 text-sm">The "Light-Bag" Promise</h4>
-                <p className="text-slate-600 text-sm mt-1 leading-relaxed">We believe a child's shoulders should carry dreams, not heavy textbooks. Our digital integration and activity-based models mean lighter backpacks and more energy for actual learning.</p>
+                <h4 className="font-bold text-slate-800 text-sm">
+                  The "Light-Bag" Promise
+                </h4>
+                <p className="text-slate-600 text-sm mt-1 leading-relaxed">
+                  We believe a child's shoulders should carry dreams, not heavy
+                  textbooks. Our digital integration and activity-based models
+                  mean lighter backpacks and more energy for actual learning.
+                </p>
               </div>
               <div>
-                <h4 className="font-bold text-slate-800 text-sm">No-Homework Weekends</h4>
-                <p className="text-slate-600 text-sm mt-1 leading-relaxed">Weekends are for family, rest, and play. All core academic reinforcement happens during our dedicated weekday school hours.</p>
+                <h4 className="font-bold text-slate-800 text-sm">
+                  No-Homework Weekends
+                </h4>
+                <p className="text-slate-600 text-sm mt-1 leading-relaxed">
+                  Weekends are for family, rest, and play. All core academic
+                  reinforcement happens during our dedicated weekday school
+                  hours.
+                </p>
               </div>
               <div>
-                <h4 className="font-bold text-slate-800 text-sm">Experiential Learning Zones</h4>
-                <p className="text-slate-600 text-sm mt-1 leading-relaxed">We replace rote memorization with "learning by doing." Whether it's planting seeds in a garden or building shapes in the Maths Lab, concepts are experienced physically before they are read in a book.</p>
+                <h4 className="font-bold text-slate-800 text-sm">
+                  Experiential Learning Zones
+                </h4>
+                <p className="text-slate-600 text-sm mt-1 leading-relaxed">
+                  We replace rote memorization with "learning by doing." Whether
+                  it's planting seeds in a garden or building shapes in the
+                  Maths Lab, concepts are experienced physically before they are
+                  read in a book.
+                </p>
               </div>
             </div>
           </AnimatedCard>
 
-          <AnimatedCard delay={0.2} hoverEffect="scale" className="border-t-4 border-t-accent">
+          <AnimatedCard
+            delay={0.2}
+            hoverEffect="scale"
+            className="border-t-4 border-t-accent hover:bg-red-200"
+          >
             <h3 className="text-xl md:text-2xl font-bold mb-6 text-slate-900 flex items-center gap-3">
               <span className="w-12 h-12 rounded-full bg-accent/10 text-accent flex items-center justify-center text-xl shrink-0">
                 <FiUsers />
@@ -273,17 +325,35 @@ export default function Home() {
             </h3>
             <div className="space-y-4">
               <div>
-                <h4 className="font-bold text-slate-800 text-sm">Multiple Intelligences Mapping</h4>
-                <p className="text-slate-600 text-sm mt-1 leading-relaxed">Not every child learns the same way. We actively identify whether your child is a visual, auditory, or kinesthetic (hands-on) learner, adapting our teaching styles to their natural strengths.</p>
+                <h4 className="font-bold text-slate-800 text-sm">
+                  Multiple Intelligences Mapping
+                </h4>
+                <p className="text-slate-600 text-sm mt-1 leading-relaxed">
+                  Not every child learns the same way. We actively identify
+                  whether your child is a visual, auditory, or kinesthetic
+                  (hands-on) learner, adapting our teaching styles to their
+                  natural strengths.
+                </p>
               </div>
               <div>
-                <h4 className="font-bold text-slate-800 text-sm">Growth Portfolios</h4>
-                <p className="text-slate-600 text-sm mt-1 leading-relaxed">Instead of just a sheet of grades, we build a continuous portfolio of your child’s creative projects, speaking milestones, and personal victories to track their true holistic growth.</p>
+                <h4 className="font-bold text-slate-800 text-sm">
+                  Growth Portfolios
+                </h4>
+                <p className="text-slate-600 text-sm mt-1 leading-relaxed">
+                  Instead of just a sheet of grades, we build a continuous
+                  portfolio of your child’s creative projects, speaking
+                  milestones, and personal victories to track their true
+                  holistic growth.
+                </p>
               </div>
             </div>
           </AnimatedCard>
 
-          <AnimatedCard delay={0.3} hoverEffect="scale" className="border-t-4 border-t-primary-500">
+          <AnimatedCard
+            delay={0.3}
+            hoverEffect="scale"
+            className="border-t-4 border-t-primary-500 hover:bg-blue-200"
+          >
             <h3 className="text-xl md:text-2xl font-bold mb-6 text-slate-900 flex items-center gap-3">
               <span className="w-12 h-12 rounded-full bg-primary-100 text-primary-600 flex items-center justify-center text-xl shrink-0">
                 <FiCheckCircle />
@@ -292,17 +362,34 @@ export default function Home() {
             </h3>
             <div className="space-y-4">
               <div>
-                <h4 className="font-bold text-slate-800 text-sm">The "No-Bench" Sports Policy</h4>
-                <p className="text-slate-600 text-sm mt-1 leading-relaxed">At BE MAX, there is no "A-team" that plays while others watch. Every single child gets active field time to build sportsmanship, teamwork, and physical fitness.</p>
+                <h4 className="font-bold text-slate-800 text-sm">
+                  The "No-Bench" Sports Policy
+                </h4>
+                <p className="text-slate-600 text-sm mt-1 leading-relaxed">
+                  At BE MAX, there is no "A-team" that plays while others watch.
+                  Every single child gets active field time to build
+                  sportsmanship, teamwork, and physical fitness.
+                </p>
               </div>
               <div>
-                <h4 className="font-bold text-slate-800 text-sm">CCA Discovery Rotation</h4>
-                <p className="text-slate-600 text-sm mt-1 leading-relaxed">Unsure what your child is naturally good at? Our Co-Curricular Activity (CCA) rotation ensures every student tries their hand at music, drama, sports, and arts before specializing in what they love most.</p>
+                <h4 className="font-bold text-slate-800 text-sm">
+                  CCA Discovery Rotation
+                </h4>
+                <p className="text-slate-600 text-sm mt-1 leading-relaxed">
+                  Unsure what your child is naturally good at? Our Co-Curricular
+                  Activity (CCA) rotation ensures every student tries their hand
+                  at music, drama, sports, and arts before specializing in what
+                  they love most.
+                </p>
               </div>
             </div>
           </AnimatedCard>
 
-          <AnimatedCard delay={0.4} hoverEffect="scale" className="border-t-4 border-t-accent">
+          <AnimatedCard
+            delay={0.4}
+            hoverEffect="scale"
+            className="border-t-4 border-t-accent hover:bg-red-200"
+          >
             <h3 className="text-xl md:text-2xl font-bold mb-6 text-slate-900 flex items-center gap-3">
               <span className="w-12 h-12 rounded-full bg-accent/10 text-accent flex items-center justify-center text-xl shrink-0">
                 <FiGlobe />
@@ -311,16 +398,36 @@ export default function Home() {
             </h3>
             <div className="space-y-4">
               <div>
-                <h4 className="font-bold text-slate-800 text-sm">"Mini-TED" Public Speaking</h4>
-                <p className="text-slate-600 text-sm mt-1 leading-relaxed">We train students to conquer stage fright early. From presenting morning assemblies to hosting debates, we build fearless public speakers.</p>
+                <h4 className="font-bold text-slate-800 text-sm">
+                  "Mini-TED" Public Speaking
+                </h4>
+                <p className="text-slate-600 text-sm mt-1 leading-relaxed">
+                  We train students to conquer stage fright early. From
+                  presenting morning assemblies to hosting debates, we build
+                  fearless public speakers.
+                </p>
               </div>
               <div>
-                <h4 className="font-bold text-slate-800 text-sm">Immersive Language Zones</h4>
-                <p className="text-slate-600 text-sm mt-1 leading-relaxed">Leveraging our legacy as India’s leading language experts, our campus features English-immersion activities where students naturally converse and think in English, rather than just studying it as a subject.</p>
+                <h4 className="font-bold text-slate-800 text-sm">
+                  Immersive Language Zones
+                </h4>
+                <p className="text-slate-600 text-sm mt-1 leading-relaxed">
+                  Leveraging our legacy as India’s leading language experts, our
+                  campus features English-immersion activities where students
+                  naturally converse and think in English, rather than just
+                  studying it as a subject.
+                </p>
               </div>
               <div>
-                <h4 className="font-bold text-slate-800 text-sm">Real-World Broadcasting</h4>
-                <p className="text-slate-600 text-sm mt-1 leading-relaxed">Utilizing our School FM Radio, students practice their communication skills by writing scripts, hosting interviews, and broadcasting to the campus—turning language learning into a thrilling real-world experience.</p>
+                <h4 className="font-bold text-slate-800 text-sm">
+                  Real-World Broadcasting
+                </h4>
+                <p className="text-slate-600 text-sm mt-1 leading-relaxed">
+                  Utilizing our School FM Radio, students practice their
+                  communication skills by writing scripts, hosting interviews,
+                  and broadcasting to the campus—turning language learning into
+                  a thrilling real-world experience.
+                </p>
               </div>
             </div>
           </AnimatedCard>
@@ -400,10 +507,11 @@ export default function Home() {
             </Link>
           </motion.div>
 
-          <div className="relative h-[600px] w-full" ref={scrollRef}>
+          <div className="relative h-[600px] z-40 w-full" ref={scrollRef}>
             <motion.div
-              style={{ y: y1 }}
-              className="absolute top-[5%] left-0 w-[55%] h-[45%] rounded-3xl overflow-hidden shadow-2xl border-4 border-white hover:z-50 hover:scale-[1.03] transition-all duration-300 z-10 cursor-pointer bg-slate-100"
+              style={{ y: y1, x: -30, rotate: -12 }}
+              whileHover={{ scale: 1.05, rotate: 0, zIndex: 100 }}
+              className="absolute inset-0 m-auto w-[65%] h-[75%] rounded-3xl overflow-hidden shadow-2xl border-[6px] border-white cursor-pointer bg-slate-100 z-10 transition-colors"
             >
               <Image
                 src="/tree.webp"
@@ -413,8 +521,9 @@ export default function Home() {
               />
             </motion.div>
             <motion.div
-              style={{ y: y3 }}
-              className="absolute top-[30%] right-0 w-[55%] h-[45%] rounded-3xl overflow-hidden shadow-2xl border-4 border-white hover:z-50 hover:scale-[1.03] transition-all duration-300 z-20 cursor-pointer bg-slate-100"
+              style={{ y: y3, x: 20, rotate: 8 }}
+              whileHover={{ scale: 1.05, rotate: 0, zIndex: 100 }}
+              className="absolute inset-0 m-auto w-[65%] h-[75%] rounded-3xl overflow-hidden shadow-2xl border-[6px] border-white cursor-pointer bg-slate-100 z-20 transition-colors"
             >
               <Image
                 src="/smart.jpg"
@@ -424,12 +533,49 @@ export default function Home() {
               />
             </motion.div>
             <motion.div
-              style={{ y: y2 }}
-              className="absolute bottom-[5%] left-[10%] w-[55%] h-[45%] rounded-3xl overflow-hidden shadow-2xl border-4 border-white hover:z-50 hover:scale-[1.03] transition-all duration-300 z-30 cursor-pointer bg-slate-100"
+              style={{ y: y2, x: -10, rotate: -5 }}
+              whileHover={{ scale: 1.05, rotate: 0, zIndex: 100 }}
+              className="absolute inset-0 m-auto w-[65%] h-[75%] rounded-3xl overflow-hidden shadow-2xl border-[6px] border-white cursor-pointer bg-slate-100 z-30 transition-colors"
             >
               <Image
                 src="/mat.jpg"
                 alt="Magik Mat"
+                fill
+                className="object-cover"
+              />
+            </motion.div>
+            <motion.div
+              style={{ y: y4, x: 30, rotate: 12 }}
+              whileHover={{ scale: 1.05, rotate: 0, zIndex: 100 }}
+              className="absolute inset-0 m-auto w-[65%] h-[75%] rounded-3xl overflow-hidden shadow-2xl border-[6px] border-white cursor-pointer bg-slate-100 z-40 transition-colors"
+            >
+              <Image
+                src="/hero-2.jpg"
+                alt="Campus Life"
+                fill
+                className="object-cover"
+              />
+            </motion.div>
+            <motion.div
+              style={{ y: y5, x: -20, rotate: -3 }}
+              whileHover={{ scale: 1.05, rotate: 0, zIndex: 100 }}
+              className="absolute inset-0 m-auto w-[65%] h-[75%] rounded-3xl overflow-hidden shadow-2xl border-[6px] border-white cursor-pointer bg-slate-100 z-50 transition-colors"
+            >
+              <Image
+                src="/music.jpg"
+                alt="Music Class"
+                fill
+                className="object-cover object-right"
+              />
+            </motion.div>
+            <motion.div
+              style={{ y: y6, x: 10, rotate: 6 }}
+              whileHover={{ scale: 1.05, rotate: 0, zIndex: 100 }}
+              className="absolute inset-0 m-auto w-[65%] h-[75%] rounded-3xl overflow-hidden shadow-2xl border-[6px] border-white cursor-pointer bg-slate-100 z-60 transition-colors"
+            >
+              <Image
+                src="/hero-4.jpg"
+                alt="Student Activity"
                 fill
                 className="object-cover"
               />
@@ -453,10 +599,10 @@ export default function Home() {
           >
             <div className="h-64 md:h-72 relative overflow-hidden bg-slate-100">
               <Image
-                src="/express.jpg"
+                src="/train.jpg"
                 alt="The BE MAX Express"
                 fill
-                className="object-cover transition-transform duration-700 group-hover:scale-110"
+                className="object-cover object-left transition-transform duration-700 group-hover:scale-110"
               />
             </div>
             <div className="p-5">
@@ -624,7 +770,7 @@ export default function Home() {
         bg="slate"
         className="relative overflow-hidden bg-cover bg-no-repeat md:bg-left bg-top-left"
         style={{
-          backgroundImage: 'url("/last.png")',
+          backgroundImage: 'url("/last.jpg")',
           transition: "background-image 1s ease-in-out",
         }}
       >

@@ -51,7 +51,7 @@ export default function BeyondAcademicsPage() {
           <AnimatedCard className="p-0 overflow-hidden" hoverEffect="glow">
             <div className="h-64 relative overflow-hidden bg-slate-200 flex items-center justify-center text-slate-400">
               <Image
-                src="/express.jpg"
+                src="/train.jpg"
                 alt="Smart Ecosystem"
                 fill
                 className="object-cover"

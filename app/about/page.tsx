@@ -11,8 +11,22 @@ import {
   FiUsers,
 } from "react-icons/fi";
 import Image from "next/image";
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function AboutPage() {
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: scrollRef,
+    offset: ["start end", "end start"],
+  });
+
+  const y1 = useTransform(scrollYProgress, [0, 1], [30, -30]);
+  const y2 = useTransform(scrollYProgress, [0, 1], [-25, 25]);
+  const y3 = useTransform(scrollYProgress, [0, 1], [15, -15]);
+  const y4 = useTransform(scrollYProgress, [0, 1], [-30, 30]);
+  const y5 = useTransform(scrollYProgress, [0, 1], [25, -25]);
+
   return (
     <div className="overflow-hidden">
       <PageHeader
@@ -83,13 +97,67 @@ export default function AboutPage() {
               </li>
             </ul>
           </div>
-          <div className="grid grid-cols-2 gap-4">
-            <div className="h-48 bg-slate-200 rounded-2xl relative overflow-hidden shadow-md">
-              <Image src="/smart.jpg" alt="Smart Ecosystem" fill className="object-cover" />
-            </div>
-            <div className="h-48 bg-slate-200 rounded-2xl mt-8 relative overflow-hidden shadow-md">
-              <Image src="/hero-3.jpg" alt="Learning Ecosystem" fill className="object-cover" />
-            </div>
+          <div className="relative h-[450px] z-30 w-full" ref={scrollRef}>
+            <motion.div
+              style={{ y: y1, x: -20, rotate: -10 }}
+              whileHover={{ scale: 1.05, rotate: 0, zIndex: 100 }}
+              className="absolute inset-0 m-auto w-[75%] h-[80%] rounded-3xl overflow-hidden shadow-2xl border-[6px] border-white cursor-pointer bg-slate-100 z-10 transition-colors"
+            >
+              <Image
+                src="/smart.jpg"
+                alt="Smart Ecosystem"
+                fill
+                className="object-cover"
+              />
+            </motion.div>
+            <motion.div
+              style={{ y: y2, x: 15, rotate: 6 }}
+              whileHover={{ scale: 1.05, rotate: 0, zIndex: 100 }}
+              className="absolute inset-0 m-auto w-[75%] h-[80%] rounded-3xl overflow-hidden shadow-2xl border-[6px] border-white cursor-pointer bg-slate-100 z-20 transition-colors"
+            >
+              <Image
+                src="/hero-3.jpg"
+                alt="Learning Ecosystem"
+                fill
+                className="object-cover"
+              />
+            </motion.div>
+            <motion.div
+              style={{ y: y3, x: -10, rotate: -5 }}
+              whileHover={{ scale: 1.05, rotate: 0, zIndex: 100 }}
+              className="absolute inset-0 m-auto w-[75%] h-[80%] rounded-3xl overflow-hidden shadow-2xl border-[6px] border-white cursor-pointer bg-slate-100 z-30 transition-colors"
+            >
+              <Image
+                src="/express.JPG"
+                alt="The Express"
+                fill
+                className="object-cover"
+              />
+            </motion.div>
+            <motion.div
+              style={{ y: y4, x: 25, rotate: 12 }}
+              whileHover={{ scale: 1.05, rotate: 0, zIndex: 100 }}
+              className="absolute inset-0 m-auto w-[75%] h-[80%] rounded-3xl overflow-hidden shadow-2xl border-[6px] border-white cursor-pointer bg-slate-100 z-40 transition-colors"
+            >
+              <Image
+                src="/activity.jpg"
+                alt="Student Activity"
+                fill
+                className="object-cover"
+              />
+            </motion.div>
+            <motion.div
+              style={{ y: y5, x: 5, rotate: -3 }}
+              whileHover={{ scale: 1.05, rotate: 0, zIndex: 100 }}
+              className="absolute inset-0 m-auto w-[75%] h-[80%] rounded-3xl overflow-hidden shadow-2xl border-[6px] border-white cursor-pointer bg-slate-100 z-50 transition-colors"
+            >
+              <Image
+                src="/councelling.jpg"
+                alt="Student Counseling"
+                fill
+                className="object-cover"
+              />
+            </motion.div>
           </div>
         </div>
 
@@ -103,49 +171,49 @@ export default function AboutPage() {
               alt="Cambridge University Press"
               width={180}
               height={60}
-              className="h-10 md:h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all"
+              className="h-10 md:h-16 w-auto object-contain transition-all"
             />
             <Image
               src="/idp.png"
               alt="IDP Australia"
               width={150}
               height={60}
-              className="h-10 md:h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all"
+              className="h-10 md:h-16 w-auto object-contain transition-all"
             />
             <Image
               src="/bc.png"
               alt="British Council"
               width={180}
               height={60}
-              className="h-10 md:h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all"
+              className="h-10 md:h-16 w-auto object-contain transition-all"
             />
             <Image
               src="/pte.png"
               alt="Pearson PTE"
               width={150}
               height={60}
-              className="h-10 md:h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all"
+              className="h-10 md:h-16 w-auto object-contain transition-all"
             />
             <Image
               src="/toefl.jpg"
               alt="TOEFL"
               width={150}
               height={60}
-              className="h-10 md:h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all"
+              className="h-10 md:h-16 w-auto object-contain transition-all"
             />
             <Image
               src="/cert.png"
               alt="LanguageCert"
               width={180}
               height={60}
-              className="h-10 md:h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all"
+              className="h-10 md:h-16 w-auto object-contain transition-all"
             />
             <Image
               src="/oet.png"
               alt="OET"
               width={120}
               height={60}
-              className="h-10 md:h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all"
+              className="h-10 md:h-16 w-auto object-contain transition-all"
             />
           </div>
         </div>
@@ -153,7 +221,7 @@ export default function AboutPage() {
 
       <Section title="Our Vision & Mission" bg="slate">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-          <AnimatedCard hoverEffect="glow">
+          <AnimatedCard hoverEffect="glow" className="hover:scale-105">
             <FiTarget className="text-accent text-4xl mb-6" />
             <h3 className="text-2xl font-bold mb-4 text-slate-900">
               Our Vision
@@ -168,7 +236,7 @@ export default function AboutPage() {
             </p>
           </AnimatedCard>
 
-          <AnimatedCard hoverEffect="glow">
+          <AnimatedCard hoverEffect="glow" className="hover:scale-105">
             <FiAward className="text-primary-600 text-4xl mb-6" />
             <h3 className="text-2xl font-bold mb-4 text-slate-900">
               Our Mission
@@ -197,7 +265,7 @@ export default function AboutPage() {
           Our Four Core Pillars
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+          <div className="bg-white hover:bg-blue-200 hover:scale-105 transition-all duration-300 p-6 rounded-2xl shadow-sm border border-slate-100">
             <div className="text-xl font-bold mb-2 text-primary-600">
               01. Academic Excellence
             </div>
@@ -206,7 +274,7 @@ export default function AboutPage() {
               stress-free environment.
             </p>
           </div>
-          <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+          <div className="bg-white hover:bg-red-100 hover:scale-105 transition-all duration-300 p-6 rounded-2xl shadow-sm border border-slate-100">
             <div className="text-xl font-bold mb-2 text-accent">
               02. Multi-Linguistic
             </div>
@@ -214,7 +282,7 @@ export default function AboutPage() {
               Flawless fluency training in English, German, French, and Arabic.
             </p>
           </div>
-          <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+          <div className="bg-white hover:bg-blue-100 hover:scale-105 transition-all duration-300 p-6 rounded-2xl shadow-sm border border-slate-100">
             <div className="text-xl font-bold mb-2 text-primary-600">
               03. Extracurriculars
             </div>
@@ -223,7 +291,7 @@ export default function AboutPage() {
               arts.
             </p>
           </div>
-          <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+          <div className="bg-white hover:bg-red-100 hover:scale-105 transition-all duration-300 p-6 rounded-2xl shadow-sm border border-slate-100">
             <div className="text-xl font-bold mb-2 text-accent">
               04. Character Building
             </div>

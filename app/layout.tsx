@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
+import PopupForm from "@/components/ui/PopupForm";
 
 export const metadata: Metadata = {
   title: "BE MAX KIDS & PUBLIC SCHOOL",
@@ -21,6 +22,7 @@ export default function RootLayout({
         <main className="grow">{children}</main>
         <Footer />
         <FloatingContact />
+        <PopupForm />
       </body>
     </html>
   );
