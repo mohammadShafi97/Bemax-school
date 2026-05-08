@@ -23,13 +23,14 @@ export default function BeyondAcademicsPage() {
         bg="slate"
       >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-          <AnimatedCard className="p-0 overflow-hidden" hoverEffect="glow">
-            <div className="h-64 relative bg-slate-200 flex items-center justify-center text-slate-400">
+          <AnimatedCard className="p-0 overflow-hidden " hoverEffect="glow">
+            <div className="h-64 relative flex items-center justify-center  text-slate-400">
               <Image
                 src="/fm.jpg"
                 alt="Smart Ecosystem"
                 fill
-                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover rounded-3xl"
               />{" "}
             </div>
             <div className="p-8">
@@ -49,12 +50,13 @@ export default function BeyondAcademicsPage() {
           </AnimatedCard>
 
           <AnimatedCard className="p-0 overflow-hidden" hoverEffect="glow">
-            <div className="h-64 relative overflow-hidden bg-slate-200 flex items-center justify-center text-slate-400">
+            <div className="h-64 relative overflow-hidden  flex items-center justify-center text-slate-400">
               <Image
                 src="/train.jpg"
                 alt="Smart Ecosystem"
                 fill
-                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover rounded-3xl"
               />
             </div>
             <div className="p-8">
@@ -75,7 +77,7 @@ export default function BeyondAcademicsPage() {
 
       <Section title="Building Strength, Discipline, and Teamwork" bg="white">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <AnimatedCard delay={0.1}>
+          <AnimatedCard delay={0.1} className="hover:bg-sky-100">
             <div className="text-4xl mb-4 text-primary-500">🏊</div>
             <h3 className="text-xl font-bold mb-3 text-slate-900">Swimming</h3>
             <p className="text-slate-600 text-sm">
@@ -85,7 +87,7 @@ export default function BeyondAcademicsPage() {
             </p>
           </AnimatedCard>
 
-          <AnimatedCard delay={0.2}>
+          <AnimatedCard delay={0.2} className="hover:bg-gray-100">
             <div className="text-4xl mb-4 text-accent">🥋</div>
             <h3 className="text-xl font-bold mb-3 text-slate-900">Karate</h3>
             <p className="text-slate-600 text-sm">
@@ -95,7 +97,7 @@ export default function BeyondAcademicsPage() {
             </p>
           </AnimatedCard>
 
-          <AnimatedCard delay={0.3}>
+          <AnimatedCard delay={0.3} className="hover:bg-yellow-100">
             <div className="text-4xl mb-4 text-primary-500">🧘</div>
             <h3 className="text-xl font-bold mb-3 text-slate-900">Yoga Club</h3>
             <p className="text-slate-600 text-sm">
@@ -105,7 +107,7 @@ export default function BeyondAcademicsPage() {
             </p>
           </AnimatedCard>
 
-          <AnimatedCard delay={0.4}>
+          <AnimatedCard delay={0.4} className="hover:bg-green-100">
             <div className="text-4xl mb-4 text-accent">🏇</div>
             <h3 className="text-xl font-bold mb-3 text-slate-900">
               Premium Sports
@@ -116,7 +118,7 @@ export default function BeyondAcademicsPage() {
             </p>
           </AnimatedCard>
 
-          <AnimatedCard delay={0.5} className="lg:col-span-2">
+          <AnimatedCard delay={0.5} className="lg:col-span-2 hover:bg-lime-100">
             <div className="text-4xl mb-4 text-primary-500">
               <FiActivity />
             </div>
@@ -139,6 +141,7 @@ export default function BeyondAcademicsPage() {
                 src="/drama.jpg"
                 alt="Smart Ecosystem"
                 fill
+                sizes="(max-width: 768px) 50vw, 25vw"
                 className="object-cover"
               />
             </div>
@@ -147,6 +150,7 @@ export default function BeyondAcademicsPage() {
                 src="/dance.jpg"
                 alt="Smart Ecosystem"
                 fill
+                sizes="(max-width: 768px) 50vw, 25vw"
                 className="object-cover"
               />
             </div>
@@ -155,6 +159,7 @@ export default function BeyondAcademicsPage() {
                 src="/music.jpg"
                 alt="Smart Ecosystem"
                 fill
+                sizes="(max-width: 768px) 50vw, 25vw"
                 className="object-cover object-left"
               />
             </div>
@@ -163,13 +168,14 @@ export default function BeyondAcademicsPage() {
                 src="/drawing.jpg"
                 alt="Smart Ecosystem"
                 fill
+                sizes="(max-width: 768px) 50vw, 25vw"
                 className="object-cover"
               />
             </div>
           </div>
 
           <div className="space-y-6">
-            <div className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+            <div className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:scale-105 ease-in-out duration-200">
               <h4 className="font-bold text-slate-900 text-lg mb-2 flex items-center gap-2">
                 <span className="text-xl">🎭</span> School Drama Club
               </h4>
@@ -179,7 +185,7 @@ export default function BeyondAcademicsPage() {
                 participate in plays and workshops.
               </p>
             </div>
-            <div className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+            <div className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:scale-105 ease-in-out duration-200">
               <h4 className="font-bold text-slate-900 text-lg mb-2 flex items-center gap-2">
                 <span className="text-xl">💃</span> Dance
               </h4>
@@ -189,7 +195,7 @@ export default function BeyondAcademicsPage() {
                 confidently.
               </p>
             </div>
-            <div className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+            <div className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:scale-105 ease-in-out duration-200">
               <h4 className="font-bold text-slate-900 text-lg mb-2 flex items-center gap-2">
                 <FiMusic className="text-accent" /> Music
               </h4>
@@ -199,7 +205,7 @@ export default function BeyondAcademicsPage() {
                 language understanding.
               </p>
             </div>
-            <div className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+            <div className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:scale-105 ease-in-out duration-200">
               <h4 className="font-bold text-slate-900 text-lg mb-2 flex items-center gap-2">
                 <span className="text-xl">🎨</span> Drawing & Clay Modelling
               </h4>

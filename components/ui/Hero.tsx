@@ -67,6 +67,7 @@ const Hero = ({
                 src={imagePath}
                 alt="Hero Background"
                 fill
+                sizes="100vw"
                 priority
                 className="object-cover opacity-40"
               />

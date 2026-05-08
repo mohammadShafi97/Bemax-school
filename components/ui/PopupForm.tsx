@@ -17,8 +17,15 @@ export default function PopupForm() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsOpen(true);
-    }, 5000); // Pops up after 5 seconds
-    return () => clearTimeout(timer);
+    }, 15000); // Pops up after 15 seconds
+
+    const handleOpenPopup = () => setIsOpen(true);
+    window.addEventListener("openPopupForm", handleOpenPopup);
+
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener("openPopupForm", handleOpenPopup);
+    };
   }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -34,7 +41,7 @@ export default function PopupForm() {
 *Message:* ${formData.message || "N/A"}`;
 
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-      message
+      message,
     )}`;
 
     window.open(whatsappUrl, "_blank");

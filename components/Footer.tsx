@@ -124,7 +124,9 @@ const Footer = () => {
             </h3>
             <ul className="space-y-3">
               <li className="text-primary-200 hover:text-white transition-colors cursor-pointer">
-                Be Max Academy
+                <a href="https://bemaxacademy.com/" target="_blank">
+                  Bemax Academy
+                </a>
               </li>
               <li className="text-primary-200 hover:text-white transition-colors cursor-pointer">
                 Be Max Global Solutions

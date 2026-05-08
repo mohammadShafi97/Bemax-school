@@ -1,6 +1,7 @@
 "use client";
 
 import Hero from "@/components/ui/Hero";
+import ParentAppeal from "@/components/home/ParentAppeal";
 import Section from "@/components/ui/Section";
 import AnimatedCard from "@/components/ui/AnimatedCard";
 import { motion, useScroll, useTransform } from "framer-motion";
@@ -15,11 +16,12 @@ import {
 } from "react-icons/fi";
 import Image from "next/image";
 import Link from "next/link";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import CountUp from "react-countup";
 
 export default function Home() {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const [deckOrder, setDeckOrder] = useState([0, 1, 2, 3, 4, 5]);
   const { scrollYProgress } = useScroll({
     target: scrollRef,
     offset: ["start end", "end start"],
@@ -32,6 +34,26 @@ export default function Home() {
   const y5 = useTransform(scrollYProgress, [0, 1], [30, -30]);
   const y6 = useTransform(scrollYProgress, [0, 1], [-20, 20]);
 
+  const deckCards = [
+    { id: 0, src: "/tree.webp", alt: "Talking Tree", y: y1, x: -30, rotate: -12 },
+    { id: 1, src: "/smart.jpg", alt: "Smart Classroom", y: y3, x: 20, rotate: 8 },
+    { id: 2, src: "/mat.jpg", alt: "Magik Mat", y: y2, x: -10, rotate: -5 },
+    { id: 3, src: "/hero-2.jpg", alt: "Campus Life", y: y4, x: 30, rotate: 12 },
+    { id: 4, src: "/music.jpg", alt: "Music Class", y: y5, x: -20, rotate: -3, imageClass: "object-right" },
+    { id: 5, src: "/hero-4.jpg", alt: "Student Activity", y: y6, x: 10, rotate: 6 },
+  ];
+
+  const handleSwipe = () => {
+    setDeckOrder((prev) => {
+      const newOrder = [...prev];
+      const topCard = newOrder.pop();
+      if (topCard !== undefined) {
+        newOrder.unshift(topCard);
+      }
+      return newOrder;
+    });
+  };
+
   return (
     <div className="overflow-hidden">
       {/* SECTION 1: THE HERO BANNER */}
@@ -41,6 +63,9 @@ export default function Home() {
         primaryAction={{ text: "Apply for Admissions", href: "/admissions" }}
         secondaryAction={{ text: "Book a Campus Tour", href: "/contact" }}
       />
+
+      {/* SECTION 1.5: PARENT APPEAL */}
+      <ParentAppeal />
 
       {/* SECTION 2: THE TRUST & LEGACY BAR */}
       <div className="bg-white md:px-[100px] py-16 md:py-20 border-b border-slate-100 shadow-sm relative z-20">
@@ -508,78 +533,37 @@ export default function Home() {
           </motion.div>
 
           <div className="relative h-[600px] z-40 w-full" ref={scrollRef}>
-            <motion.div
-              style={{ y: y1, x: -30, rotate: -12 }}
-              whileHover={{ scale: 1.05, rotate: 0, zIndex: 100 }}
-              className="absolute inset-0 m-auto w-[65%] h-[75%] rounded-3xl overflow-hidden shadow-2xl border-[6px] border-white cursor-pointer bg-slate-100 z-10 transition-colors"
-            >
-              <Image
-                src="/tree.webp"
-                alt="Talking Tree"
-                fill
-                className="object-cover"
-              />
-            </motion.div>
-            <motion.div
-              style={{ y: y3, x: 20, rotate: 8 }}
-              whileHover={{ scale: 1.05, rotate: 0, zIndex: 100 }}
-              className="absolute inset-0 m-auto w-[65%] h-[75%] rounded-3xl overflow-hidden shadow-2xl border-[6px] border-white cursor-pointer bg-slate-100 z-20 transition-colors"
-            >
-              <Image
-                src="/smart.jpg"
-                alt="Smart Classroom"
-                fill
-                className="object-cover"
-              />
-            </motion.div>
-            <motion.div
-              style={{ y: y2, x: -10, rotate: -5 }}
-              whileHover={{ scale: 1.05, rotate: 0, zIndex: 100 }}
-              className="absolute inset-0 m-auto w-[65%] h-[75%] rounded-3xl overflow-hidden shadow-2xl border-[6px] border-white cursor-pointer bg-slate-100 z-30 transition-colors"
-            >
-              <Image
-                src="/mat.jpg"
-                alt="Magik Mat"
-                fill
-                className="object-cover"
-              />
-            </motion.div>
-            <motion.div
-              style={{ y: y4, x: 30, rotate: 12 }}
-              whileHover={{ scale: 1.05, rotate: 0, zIndex: 100 }}
-              className="absolute inset-0 m-auto w-[65%] h-[75%] rounded-3xl overflow-hidden shadow-2xl border-[6px] border-white cursor-pointer bg-slate-100 z-40 transition-colors"
-            >
-              <Image
-                src="/hero-2.jpg"
-                alt="Campus Life"
-                fill
-                className="object-cover"
-              />
-            </motion.div>
-            <motion.div
-              style={{ y: y5, x: -20, rotate: -3 }}
-              whileHover={{ scale: 1.05, rotate: 0, zIndex: 100 }}
-              className="absolute inset-0 m-auto w-[65%] h-[75%] rounded-3xl overflow-hidden shadow-2xl border-[6px] border-white cursor-pointer bg-slate-100 z-50 transition-colors"
-            >
-              <Image
-                src="/music.jpg"
-                alt="Music Class"
-                fill
-                className="object-cover object-right"
-              />
-            </motion.div>
-            <motion.div
-              style={{ y: y6, x: 10, rotate: 6 }}
-              whileHover={{ scale: 1.05, rotate: 0, zIndex: 100 }}
-              className="absolute inset-0 m-auto w-[65%] h-[75%] rounded-3xl overflow-hidden shadow-2xl border-[6px] border-white cursor-pointer bg-slate-100 z-60 transition-colors"
-            >
-              <Image
-                src="/hero-4.jpg"
-                alt="Student Activity"
-                fill
-                className="object-cover"
-              />
-            </motion.div>
+            {deckOrder.map((cardIndex, i) => {
+              const card = deckCards[cardIndex];
+              const isTop = i === deckOrder.length - 1;
+              return (
+                <motion.div
+                  key={card.id}
+                  drag={isTop ? "x" : false}
+                  dragConstraints={{ left: 0, right: 0 }}
+                  onDragEnd={(e, info) => {
+                    if (Math.abs(info.offset.x) > 50) {
+                      handleSwipe();
+                    }
+                  }}
+                  onClick={() => {
+                    if (isTop) handleSwipe();
+                  }}
+                  style={{ y: card.y, x: card.x, rotate: card.rotate, zIndex: (i + 1) * 10 }}
+                  whileHover={{ scale: 1.05, rotate: 0, zIndex: 100 }}
+                  whileTap={{ scale: 1.05, rotate: 0, zIndex: 100 }}
+                  className={`absolute inset-0 m-auto w-[65%] h-[75%] rounded-3xl overflow-hidden shadow-2xl border-[6px] border-white bg-slate-100 transition-colors ${isTop ? "cursor-grab active:cursor-grabbing" : "cursor-pointer"}`}
+                >
+                  <Image
+                    src={card.src}
+                    alt={card.alt}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className={`object-cover ${card.imageClass || ""}`}
+                  />
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </Section>
@@ -602,6 +586,7 @@ export default function Home() {
                 src="/train.jpg"
                 alt="The BE MAX Express"
                 fill
+                sizes="(max-width: 768px) 100vw, 33vw"
                 className="object-cover object-left transition-transform duration-700 group-hover:scale-110"
               />
             </div>
@@ -626,6 +611,7 @@ export default function Home() {
                 src="/fm.jpg"
                 alt="School FM"
                 fill
+                sizes="(max-width: 768px) 100vw, 33vw"
                 className="object-cover transition-transform duration-700 group-hover:scale-110"
               />
             </div>
@@ -650,6 +636,7 @@ export default function Home() {
                 src="/arts.jpg"
                 alt="Arts & Sports"
                 fill
+                sizes="(max-width: 768px) 100vw, 33vw"
                 className="object-cover transition-transform duration-700 group-hover:scale-110"
               />
             </div>
