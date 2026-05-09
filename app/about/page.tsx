@@ -26,71 +26,63 @@ export default function AboutPage() {
         subtitle="Built upon a phenomenal 12-year legacy, we bring a wealth of educational expertise to Kollam."
         bg="white"
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
-          <div>
-            <h3 className="text-2xl font-bold mb-4 flex items-center gap-2">
-              <FiGlobe className="text-accent" /> The BE MAX Ecosystem
-            </h3>
-            <p className="text-slate-600 mb-6 leading-relaxed">
-              Our school provides an integrated educational environment backed
-              by a massive ecosystem that empowers learners at every stage of
-              their lives. Our sister organizations include:
+        <div className="max-w-3xl mx-auto text-center mb-12">
+          <h3 className="text-3xl font-bold mb-6 flex items-center justify-center gap-3">
+            <FiGlobe className="text-accent" /> The BE MAX Ecosystem
+          </h3>
+          <p className="text-slate-600 text-lg leading-relaxed">
+            Our school provides an integrated educational environment backed by
+            a massive ecosystem that empowers learners at every stage of their
+            lives. Our sister organizations include:
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          <AnimatedCard hoverEffect="glow" className="hover:-translate-y-2">
+            <div className="w-12 h-12 rounded-2xl bg-primary-100 text-primary-600 flex items-center justify-center mb-6 text-xl font-bold">
+              1
+            </div>
+            <h4 className="text-xl font-bold text-slate-900 mb-3">
+              Be Max Academy
+            </h4>
+            <p className="text-slate-600">
+              Our premier coaching division with over a decade of excellence in
+              language training.
             </p>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3">
-                <div className="mt-1 w-6 h-6 rounded-full bg-primary-100 text-primary-600 flex items-center justify-center shrink-0">
-                  1
-                </div>
-                <div>
-                  <strong className="text-slate-900">Be Max Academy:</strong>{" "}
-                  Our premier coaching division with over a decade of excellence
-                  in language training.
-                </div>
-              </li>
-              <li className="flex items-start gap-3">
-                <div className="mt-1 w-6 h-6 rounded-full bg-primary-100 text-primary-600 flex items-center justify-center shrink-0">
-                  2
-                </div>
-                <div>
-                  <strong className="text-slate-900">
-                    Be Max Global Solutions:
-                  </strong>{" "}
-                  Empowering students to reach their international career goals.
-                </div>
-              </li>
-              <li className="flex items-start gap-3">
-                <div className="mt-1 w-6 h-6 rounded-full bg-primary-100 text-primary-600 flex items-center justify-center shrink-0">
-                  3
-                </div>
-                <div>
-                  <strong className="text-slate-900">
-                    Be Max Publications:
-                  </strong>{" "}
-                  Delivering high-quality educational resources.
-                </div>
-              </li>
-              <li className="flex items-start gap-3">
-                <div className="mt-1 w-6 h-6 rounded-full bg-primary-100 text-primary-600 flex items-center justify-center shrink-0">
-                  4
-                </div>
-                <div>
-                  <strong className="text-slate-900">
-                    Be Max Learning App:
-                  </strong>{" "}
-                  Bringing digital learning solutions directly to students'
-                  fingertips.
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div className="grid grid-cols-2 gap-4">
-            <div className="h-48 bg-slate-200 rounded-2xl relative overflow-hidden shadow-md">
-              <Image src="/smart.jpg" alt="Smart Ecosystem" fill className="object-cover" />
+          </AnimatedCard>
+          <AnimatedCard hoverEffect="glow" className="hover:-translate-y-2">
+            <div className="w-12 h-12 rounded-2xl bg-primary-100 text-primary-600 flex items-center justify-center mb-6 text-xl font-bold">
+              2
             </div>
-            <div className="h-48 bg-slate-200 rounded-2xl mt-8 relative overflow-hidden shadow-md">
-              <Image src="/hero-3.jpg" alt="Learning Ecosystem" fill className="object-cover" />
+            <h4 className="text-xl font-bold text-slate-900 mb-3">
+              Be Max Global Solutions
+            </h4>
+            <p className="text-slate-600">
+              Empowering students to reach their international career goals.
+            </p>
+          </AnimatedCard>
+          <AnimatedCard hoverEffect="glow" className="hover:-translate-y-2">
+            <div className="w-12 h-12 rounded-2xl bg-primary-100 text-primary-600 flex items-center justify-center mb-6 text-xl font-bold">
+              3
             </div>
-          </div>
+            <h4 className="text-xl font-bold text-slate-900 mb-3">
+              Be Max Publications
+            </h4>
+            <p className="text-slate-600">
+              Delivering high-quality educational resources.
+            </p>
+          </AnimatedCard>
+          <AnimatedCard hoverEffect="glow" className="hover:-translate-y-2">
+            <div className="w-12 h-12 rounded-2xl bg-primary-100 text-primary-600 flex items-center justify-center mb-6 text-xl font-bold">
+              4
+            </div>
+            <h4 className="text-xl font-bold text-slate-900 mb-3">
+              Be Max Learning App
+            </h4>
+            <p className="text-slate-600">
+              Bringing digital learning solutions directly to students'
+              fingertips.
+            </p>
+          </AnimatedCard>
         </div>
 
         <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100">
@@ -103,49 +95,49 @@ export default function AboutPage() {
               alt="Cambridge University Press"
               width={180}
               height={60}
-              className="h-10 md:h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all"
+              className="h-10 md:h-16 w-auto object-contain transition-all"
             />
             <Image
               src="/idp.png"
               alt="IDP Australia"
               width={150}
               height={60}
-              className="h-10 md:h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all"
+              className="h-10 md:h-16 w-auto object-contain transition-all"
             />
             <Image
               src="/bc.png"
               alt="British Council"
               width={180}
               height={60}
-              className="h-10 md:h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all"
+              className="h-10 md:h-16 w-auto object-contain transition-all"
             />
             <Image
               src="/pte.png"
               alt="Pearson PTE"
               width={150}
               height={60}
-              className="h-10 md:h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all"
+              className="h-10 md:h-16 w-auto object-contain transition-all"
             />
             <Image
               src="/toefl.jpg"
               alt="TOEFL"
               width={150}
               height={60}
-              className="h-10 md:h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all"
+              className="h-10 md:h-16 w-auto object-contain transition-all"
             />
             <Image
               src="/cert.png"
               alt="LanguageCert"
               width={180}
               height={60}
-              className="h-10 md:h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all"
+              className="h-10 md:h-16 w-auto object-contain transition-all"
             />
             <Image
               src="/oet.png"
               alt="OET"
               width={120}
               height={60}
-              className="h-10 md:h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all"
+              className="h-10 md:h-16 w-auto object-contain transition-all"
             />
           </div>
         </div>
@@ -153,7 +145,7 @@ export default function AboutPage() {
 
       <Section title="Our Vision & Mission" bg="slate">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-          <AnimatedCard hoverEffect="glow">
+          <AnimatedCard hoverEffect="glow" className="hover:scale-105">
             <FiTarget className="text-accent text-4xl mb-6" />
             <h3 className="text-2xl font-bold mb-4 text-slate-900">
               Our Vision
@@ -168,7 +160,7 @@ export default function AboutPage() {
             </p>
           </AnimatedCard>
 
-          <AnimatedCard hoverEffect="glow">
+          <AnimatedCard hoverEffect="glow" className="hover:scale-105">
             <FiAward className="text-primary-600 text-4xl mb-6" />
             <h3 className="text-2xl font-bold mb-4 text-slate-900">
               Our Mission
@@ -194,10 +186,11 @@ export default function AboutPage() {
         </div>
 
         <h3 className="text-2xl font-bold text-center mb-8">
-          Our Four Core Pillars
+          Four Core Pillars of{" "}
+          <span className="text-accent text-3xl">Be Max</span>
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+          <div className="bg-white hover:bg-blue-200 hover:scale-105 transition-all duration-300 p-6 rounded-2xl shadow-sm border border-slate-100">
             <div className="text-xl font-bold mb-2 text-primary-600">
               01. Academic Excellence
             </div>
@@ -206,7 +199,7 @@ export default function AboutPage() {
               stress-free environment.
             </p>
           </div>
-          <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+          <div className="bg-white hover:bg-red-100 hover:scale-105 transition-all duration-300 p-6 rounded-2xl shadow-sm border border-slate-100">
             <div className="text-xl font-bold mb-2 text-accent">
               02. Multi-Linguistic
             </div>
@@ -214,7 +207,7 @@ export default function AboutPage() {
               Flawless fluency training in English, German, French, and Arabic.
             </p>
           </div>
-          <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+          <div className="bg-white hover:bg-blue-100 hover:scale-105 transition-all duration-300 p-6 rounded-2xl shadow-sm border border-slate-100">
             <div className="text-xl font-bold mb-2 text-primary-600">
               03. Extracurriculars
             </div>
@@ -223,7 +216,7 @@ export default function AboutPage() {
               arts.
             </p>
           </div>
-          <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+          <div className="bg-white hover:bg-red-100 hover:scale-105 transition-all duration-300 p-6 rounded-2xl shadow-sm border border-slate-100">
             <div className="text-xl font-bold mb-2 text-accent">
               04. Character Building
             </div>

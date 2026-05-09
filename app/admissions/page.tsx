@@ -59,6 +59,7 @@ export default function AdmissionsPage() {
                 src="/hero-5.jpg"
                 alt="Smart Ecosystem"
                 fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
               />
             </div>

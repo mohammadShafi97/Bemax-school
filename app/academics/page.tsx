@@ -31,7 +31,10 @@ export default function AcademicsPage() {
         bg="slate"
       >
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <AnimatedCard delay={0.1} className="flex flex-col">
+          <AnimatedCard
+            delay={0.1}
+            className="flex flex-col hover:bg-green-100 hover:scale-105 transition-all duration-300"
+          >
             <div className="text-4xl mb-4">🌳</div>
             <h3 className="text-xl font-bold mb-3 text-slate-900">
               My Talking Tree
@@ -45,7 +48,10 @@ export default function AcademicsPage() {
             </p>
           </AnimatedCard>
 
-          <AnimatedCard delay={0.2} className="flex flex-col">
+          <AnimatedCard
+            delay={0.2}
+            className="flex flex-col hover:bg-yellow-100 hover:scale-105 transition-all duration-300"
+          >
             <div className="text-4xl mb-4">🏃‍♂️</div>
             <h3 className="text-xl font-bold mb-3 text-slate-900">
               The Magik Mat
@@ -58,7 +64,10 @@ export default function AcademicsPage() {
             </p>
           </AnimatedCard>
 
-          <AnimatedCard delay={0.3} className="flex flex-col">
+          <AnimatedCard
+            delay={0.3}
+            className="flex flex-col hover:bg-sky-100 hover:scale-105 transition-all duration-300"
+          >
             <div className="text-4xl mb-4 text-primary-500">
               <FiMonitor />
             </div>
@@ -72,7 +81,10 @@ export default function AcademicsPage() {
             </p>
           </AnimatedCard>
 
-          <AnimatedCard delay={0.4} className="flex flex-col">
+          <AnimatedCard
+            delay={0.4}
+            className="flex flex-col hover:bg-rose-100 hover:scale-105 transition-all duration-300"
+          >
             <div className="text-4xl mb-4 text-accent">
               <FiCpu />
             </div>
@@ -86,7 +98,10 @@ export default function AcademicsPage() {
             </p>
           </AnimatedCard>
 
-          <AnimatedCard delay={0.5} className="flex flex-col lg:col-span-2">
+          <AnimatedCard
+            delay={0.5}
+            className="flex flex-col lg:col-span-2 hover:bg-violet-100"
+          >
             <div className="text-4xl mb-4 text-primary-600">
               <FiCode />
             </div>
@@ -170,6 +185,7 @@ export default function AcademicsPage() {
               src="/activity.jpg"
               alt="Smart Ecosystem"
               fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover object-center"
             />
           </div>
@@ -228,7 +244,7 @@ export default function AcademicsPage() {
         bg="slate"
       >
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-          <AnimatedCard hoverEffect="lift">
+          <AnimatedCard hoverEffect="lift" className="hover:bg-violet-100">
             <div className="text-4xl mb-4 text-primary-600 flex justify-center">
               <FiBookOpen />
             </div>
@@ -240,7 +256,7 @@ export default function AcademicsPage() {
               and reduce screen time.
             </p>
           </AnimatedCard>
-          <AnimatedCard hoverEffect="lift">
+          <AnimatedCard hoverEffect="lift" className="hover:bg-red-100">
             <div className="text-4xl mb-4 text-accent flex justify-center">
               ❤️
             </div>
@@ -250,7 +266,7 @@ export default function AcademicsPage() {
               relationships, guiding students to become compassionate.
             </p>
           </AnimatedCard>
-          <AnimatedCard hoverEffect="lift">
+          <AnimatedCard hoverEffect="lift" className="hover:bg-amber-100">
             <div className="text-4xl mb-4 text-primary-600 flex justify-center">
               🏫
             </div>

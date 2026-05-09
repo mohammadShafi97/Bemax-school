@@ -88,12 +88,12 @@ const Navbar = () => {
               );
             })}
           </div>
-          <Link
-            href="/admissions"
+          <button
+            onClick={() => window.dispatchEvent(new Event("openPopupForm"))}
             className="bg-accent hidden lg:block text-white px-5 py-2.5 rounded-full font-semibold shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 whitespace-nowrap"
           >
             Apply for 2026-27
-          </Link>
+          </button>
 
           {/* Mobile Menu Button */}
           <div className="lg:hidden flex items-center z-50 relative">
@@ -137,13 +137,15 @@ const Navbar = () => {
                 );
               })}
               <div className="pt-6 w-full">
-                <Link
-                  href="/admissions"
-                  onClick={() => setIsOpen(false)}
+                <button
+                  onClick={() => {
+                    setIsOpen(false);
+                    window.dispatchEvent(new Event("openPopupForm"));
+                  }}
                   className="w-full bg-accent text-white px-4 py-4 rounded-full font-bold shadow-md block text-center mt-2 text-lg"
                 >
                   Apply for 2026-27
-                </Link>
+                </button>
               </div>
             </div>
           </motion.div>

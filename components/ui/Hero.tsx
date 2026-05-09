@@ -23,7 +23,8 @@ const Hero = ({
   secondaryAction,
 }: HeroProps) => {
   const images = [
-    'url("/hero-1.jpg")',
+    'url("/last.jpg")',
+    'url("/hero-5.jpg")',
     'url("/hero-2.jpg")',
     'url("/hero-3.jpg")',
     'url("/hero-4.jpg")',
@@ -66,6 +67,7 @@ const Hero = ({
                 src={imagePath}
                 alt="Hero Background"
                 fill
+                sizes="100vw"
                 priority
                 className="object-cover opacity-40"
               />
@@ -83,7 +85,7 @@ const Hero = ({
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <h1 className="text-6xl font-black text-white mb-6 tracking-wider drop-shadow-xl leading-tight">
+          <h1 className="text-5xl font-black text-white mb-6 tracking-wider drop-shadow-xl leading-tight">
             {title.split("\n").map((line, i) => (
               <span key={i} className="block">
                 {line}
@@ -96,7 +98,7 @@ const Hero = ({
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-base text-primary-100 max-w-3xl mx-auto mb-10 font-medium drop-shadow-md"
+          className="text-base text-white max-w-2xl mx-auto mb-10 font-medium"
         >
           {subtitle}
         </motion.p>
@@ -111,7 +113,7 @@ const Hero = ({
             {primaryAction && (
               <Link
                 href={primaryAction.href}
-                className="w-fit sm:w-auto bg-accent text-white md:px-8 md:py-4 p-2 rounded-full font-bold shadow-[0_0_20px_rgba(244,63,94,0.3)] hover:shadow-[0_0_30px_rgba(244,63,94,0.5)] hover:-translate-y-1 transition-all text-lg"
+                className="w-fit sm:w-auto bg-accent text-white md:px-8  p-2 rounded-full font-bold shadow-[0_0_20px_rgba(244,63,94,0.3)] hover:shadow-[0_0_30px_rgba(244,63,94,0.5)] hover:-translate-y-1 transition-all text-lg"
               >
                 {primaryAction.text}
               </Link>
@@ -119,7 +121,7 @@ const Hero = ({
             {secondaryAction && (
               <Link
                 href={secondaryAction.href}
-                className="w-fit sm:w-auto glass text-white md:px-8 md:py-4 p-2 rounded-full font-bold border border-white/20 hover:bg-white/10 hover:-translate-y-1 transition-all text-lg"
+                className="w-fit sm:w-auto glass text-white md:px-8  p-2 rounded-full font-bold border border-white/20 hover:bg-white/10 hover:-translate-y-1 transition-all text-lg"
               >
                 {secondaryAction.text}
               </Link>
