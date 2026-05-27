@@ -28,7 +28,7 @@ const ParentAppeal = () => {
   // Parallax transform values for different objects
   const x1 = useTransform(smoothMouseX, [-0.5, 0.5], [-60, 60]);
   const y1 = useTransform(smoothMouseY, [-0.5, 0.5], [-60, 60]);
-  
+
   const x2 = useTransform(smoothMouseX, [-0.5, 0.5], [40, -40]);
   const y2 = useTransform(smoothMouseY, [-0.5, 0.5], [40, -40]);
 
@@ -39,8 +39,8 @@ const ParentAppeal = () => {
   const y4 = useTransform(smoothMouseY, [-0.5, 0.5], [-80, 80]);
 
   return (
-    <section 
-      className="relative py-24 bg-gradient-to-b from-white to-slate-50 overflow-hidden"
+    <section
+      className="relative py-24 bg-linear-to-b from-white to-slate-50 overflow-hidden"
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >
@@ -104,19 +104,24 @@ const ParentAppeal = () => {
       >
         <FiHeart size={48} />
       </motion.div>
-      
+
       {/* Floating orbs for extra new-gen feel */}
-      <motion.div 
+      <motion.div
         style={{ x: x2, y: y1 }}
         animate={{ scale: [1, 1.1, 1], opacity: [0.5, 0.8, 0.5] }}
         transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-0 right-0 w-96 h-96 bg-primary-100 rounded-full blur-3xl opacity-50 -translate-y-1/2 translate-x-1/2" 
+        className="absolute top-0 right-0 w-96 h-96 bg-primary-100 rounded-full blur-3xl opacity-50 -translate-y-1/2 translate-x-1/2"
       />
-      <motion.div 
+      <motion.div
         style={{ x: x1, y: y2 }}
         animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
-        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-        className="absolute bottom-0 left-0 w-80 h-80 bg-accent/10 rounded-full blur-3xl opacity-50 translate-y-1/2 -translate-x-1/2" 
+        transition={{
+          duration: 6,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: 1,
+        }}
+        className="absolute bottom-0 left-0 w-80 h-80 bg-accent/10 rounded-full blur-3xl opacity-50 translate-y-1/2 -translate-x-1/2"
       />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 relative z-10 text-center pointer-events-none">
@@ -130,7 +135,19 @@ const ParentAppeal = () => {
           Are you a parent looking for the{" "}
           <span className="text-accent relative inline-block">
             best school
-            <svg className="absolute -bottom-2 left-0 w-full" viewBox="0 0 200 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 5.5C52.5 -1.5 148.5 -1.5 197.5 5.5" stroke="#f43f5e" strokeWidth="4" strokeLinecap="round"/></svg>
+            <svg
+              className="absolute -bottom-2 left-0 w-full"
+              viewBox="0 0 200 8"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2.5 5.5C52.5 -1.5 148.5 -1.5 197.5 5.5"
+                stroke="#f43f5e"
+                strokeWidth="4"
+                strokeLinecap="round"
+              />
+            </svg>
           </span>{" "}
           for your kid?
         </motion.h2>
@@ -143,9 +160,16 @@ const ParentAppeal = () => {
           className="bg-white/70 backdrop-blur-xl p-8 md:p-12 rounded-[2.5rem] shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white pointer-events-auto"
         >
           <p className="text-lg md:text-xl text-slate-700 leading-relaxed mb-8 font-medium">
-            One that provides <span className="text-primary-600 font-bold">top-tier academics</span> in a <span className="text-accent font-bold">stress-free</span> learning environment while enhancing their critical thinking capacity, creativity, language fluency, soft skills, arts, and sports, all while building good character?
+            One that provides{" "}
+            <span className="text-primary-600 font-bold">
+              top-tier academics
+            </span>{" "}
+            in a <span className="text-accent font-bold">stress-free</span>{" "}
+            learning environment while enhancing their critical thinking
+            capacity, creativity, language fluency, soft skills, arts, and
+            sports, all while building good character?
           </p>
-          
+
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -165,7 +189,13 @@ const ParentAppeal = () => {
             className="inline-block bg-primary-50/80 text-primary-900 px-6 py-5 rounded-2xl border border-primary-100 shadow-inner"
           >
             <p className="text-base md:text-lg leading-relaxed font-semibold">
-              Welcome to <span className="text-primary-700 font-black">BE MAX Kids & Public School</span>, a pioneering project of the BE MAX Group of Institutions. We are dedicated to providing an integrated educational environment where joy and innovation meet.
+              Welcome to{" "}
+              <span className="text-primary-700 font-black">
+                BE MAX Kids & Public School
+              </span>
+              , a pioneering project of the BE MAX Group of Institutions. We are
+              dedicated to providing an integrated educational environment where
+              joy and innovation meet.
             </p>
           </motion.div>
         </motion.div>

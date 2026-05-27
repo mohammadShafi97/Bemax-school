@@ -75,7 +75,7 @@ export default function StudentSupportPage() {
 
       <Section title="Nurturing Mental and Emotional Health" bg="slate">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="h-[400px] relative overflow-hidden bg-slate-200 rounded-[2rem] flex items-center justify-center text-slate-400">
+          <div className="h-[400px] relative overflow-hidden bg-slate-200 rounded-4xl flex items-center justify-center text-slate-400">
             <Image
               src="/councelling.jpg"
               alt="Smart Ecosystem"

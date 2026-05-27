@@ -300,7 +300,7 @@ export default function GalleryPage() {
                 </div>
 
                 {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-primary-900/80 via-primary-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                <div className="absolute inset-0 bg-linear-to-t from-primary-900/80 via-primary-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                   <span className="text-accent text-xs font-bold uppercase tracking-wider mb-1">
                     {item.category}
                   </span>
@@ -321,7 +321,7 @@ export default function GalleryPage() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[100] bg-primary-900/95 backdrop-blur-sm flex items-center justify-center p-4 sm:p-8"
+            className="fixed inset-0 z-100 bg-primary-900/95 backdrop-blur-sm flex items-center justify-center p-4 sm:p-8"
             onClick={() => setSelectedMedia(null)}
           >
             <button
@@ -356,7 +356,7 @@ export default function GalleryPage() {
                 />
               )}
 
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
+              <div className="absolute bottom-0 left-0 right-0 bg-linear-to-t from-black/80 to-transparent p-6">
                 <span className="text-accent text-xs font-bold uppercase tracking-wider mb-1 block">
                   {selectedMedia.category}
                 </span>
