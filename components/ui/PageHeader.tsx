@@ -11,22 +11,28 @@ interface PageHeaderProps {
   secondaryAction?: { text: string; href: string };
 }
 
-const PageHeader = ({ title, subtitle, imagePath, primaryAction, secondaryAction }: PageHeaderProps) => {
+const PageHeader = ({
+  title,
+  subtitle,
+  imagePath,
+  primaryAction,
+  secondaryAction,
+}: PageHeaderProps) => {
   return (
     <section className="relative pt-40 pb-20 md:pt-52 md:pb-28 overflow-hidden bg-primary-900">
       {/* Background Image or Gradient */}
       <div className="absolute inset-0 z-0">
         {imagePath ? (
           <>
-            <div 
+            <div
               className="absolute inset-0 bg-cover bg-center bg-no-repeat"
               style={{ backgroundImage: `url(${imagePath})` }}
             />
             <div className="absolute inset-0 bg-black/50" />
-            <div className="absolute inset-0 bg-gradient-to-t from-primary-900 via-primary-900/40 to-transparent" />
+            <div className="absolute inset-0 bg-linear-to-t from-primary-900 via-primary-900/40 to-transparent" />
           </>
         ) : (
-          <div className="absolute inset-0 bg-gradient-to-br from-primary-900 via-primary-800 to-slate-900" />
+          <div className="absolute inset-0 bg-linear-to-br from-primary-900 via-primary-800 to-slate-900" />
         )}
       </div>
 
@@ -37,7 +43,7 @@ const PageHeader = ({ title, subtitle, imagePath, primaryAction, secondaryAction
           transition={{ duration: 0.6 }}
         >
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-white mb-6 tracking-tight drop-shadow-lg leading-tight">
-             {title.split("\n").map((line, i) => (
+            {title.split("\n").map((line, i) => (
               <span key={i} className="block">
                 {line}
               </span>

@@ -185,7 +185,7 @@ export default function AdmissionsPage() {
               <div className="w-16 h-16 shrink-0 bg-primary-600 text-white rounded-full flex items-center justify-center text-2xl font-black shadow-lg border-4 border-slate-50">
                 {item.step}
               </div>
-              <div className="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-100 flex-grow">
+              <div className="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-100 grow">
                 <h4 className="text-xl font-bold text-slate-900 mb-2">
                   {item.title}
                 </h4>

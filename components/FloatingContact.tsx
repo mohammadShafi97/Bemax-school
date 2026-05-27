@@ -3,11 +3,12 @@ import { FaWhatsapp, FaPhoneAlt } from "react-icons/fa";
 
 const FloatingContact = () => {
   const phoneNumber = "919446898543"; // Removed + for WhatsApp URL
-  const whatsappUrl = `https://wa.me/${phoneNumber}`;
+  const message = "Hello Bemax Public School! I visited your website and would like to inquire about the admission process, fee structure, and available seats. Could you please guide me on the next steps?";
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
   const callUrl = `tel:+${phoneNumber}`;
 
   return (
-    <div className="fixed bottom-6 right-6 flex flex-col gap-4 z-[9999]">
+    <div className="fixed bottom-6 right-6 flex flex-col gap-4 z-9999">
       {/* WhatsApp Button */}
       <a
         href={whatsappUrl}
