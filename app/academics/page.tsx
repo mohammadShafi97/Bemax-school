@@ -33,86 +33,141 @@ export default function AcademicsPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <AnimatedCard
             delay={0.1}
-            className="flex flex-col hover:bg-green-100 hover:scale-105 transition-all duration-300"
+            className="relative overflow-hidden flex flex-col min-h-[380px] group border-none shadow-xl"
+            hoverEffect="lift"
           >
-            <div className="text-4xl mb-4">🌳</div>
-            <h3 className="text-xl font-bold mb-3 text-slate-900">
-              My Talking Tree
-            </h3>
-            <p className="text-slate-600 text-sm grow">
-              Say hello to our AI-integrated robotic tree that brings joy and
-              interactivity to children's learning. This tree engages children
-              with fun educational content by seamlessly connecting to the
-              screen. It serves as a dynamic learning platform that can be
-              personalized.
-            </p>
+            <Image
+              src="/tree.webp"
+              alt="My Talking Tree"
+              fill
+              sizes="(max-width: 768px) 100vw, 33vw"
+              className="object-cover transition-transform duration-700 group-hover:scale-110"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/70 to-slate-900/30 transition-opacity duration-300 group-hover:opacity-90" />
+            <div className="relative z-10 flex flex-col h-full grow justify-end text-white">
+              <div className="text-4xl mb-4 transform group-hover:scale-110 transition-transform duration-300 origin-left">🌳</div>
+              <h3 className="text-xl font-bold mb-3 text-white">
+                My Talking Tree
+              </h3>
+              <p className="text-slate-200 text-sm grow leading-relaxed">
+                Say hello to our AI-integrated robotic tree that brings joy and
+                interactivity to children's learning. This tree engages children
+                with fun educational content by seamlessly connecting to the
+                screen. It serves as a dynamic learning platform that can be
+                personalized.
+              </p>
+            </div>
           </AnimatedCard>
 
           <AnimatedCard
             delay={0.2}
-            className="flex flex-col hover:bg-yellow-100 hover:scale-105 transition-all duration-300"
+            className="relative overflow-hidden flex flex-col min-h-[380px] group border-none shadow-xl"
+            hoverEffect="lift"
           >
-            <div className="text-4xl mb-4">🏃‍♂️</div>
-            <h3 className="text-xl font-bold mb-3 text-slate-900">
-              The Magik Mat
-            </h3>
-            <p className="text-slate-600 text-sm grow">
-              Moving beyond traditional desks, the Magik Mat enhances learning
-              with fun educational games focused on numbers and the alphabet. By
-              jumping on letters, children solve quizzes that foster mind-body
-              coordination.
-            </p>
+            <Image
+              src="/mat.jpg"
+              alt="The Magik Mat"
+              fill
+              sizes="(max-width: 768px) 100vw, 33vw"
+              className="object-cover transition-transform duration-700 group-hover:scale-110"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/70 to-slate-900/30 transition-opacity duration-300 group-hover:opacity-90" />
+            <div className="relative z-10 flex flex-col h-full grow justify-end text-white">
+              <div className="text-4xl mb-4 transform group-hover:scale-110 transition-transform duration-300 origin-left">🏃‍♂️</div>
+              <h3 className="text-xl font-bold mb-3 text-white">
+                The Magik Mat
+              </h3>
+              <p className="text-slate-200 text-sm grow leading-relaxed">
+                Moving beyond traditional desks, the Magik Mat enhances learning
+                with fun educational games focused on numbers and the alphabet. By
+                jumping on letters, children solve quizzes that foster mind-body
+                coordination.
+              </p>
+            </div>
           </AnimatedCard>
 
           <AnimatedCard
             delay={0.3}
-            className="flex flex-col hover:bg-sky-100 hover:scale-105 transition-all duration-300"
+            className="relative overflow-hidden flex flex-col min-h-[380px] group border-none shadow-xl"
+            hoverEffect="lift"
           >
-            <div className="text-4xl mb-4 text-primary-500">
-              <FiMonitor />
+            <Image
+              src="/smart.jpg"
+              alt="Smart Classrooms"
+              fill
+              sizes="(max-width: 768px) 100vw, 33vw"
+              className="object-cover transition-transform duration-700 group-hover:scale-110"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/70 to-slate-900/30 transition-opacity duration-300 group-hover:opacity-90" />
+            <div className="relative z-10 flex flex-col h-full grow justify-end text-white">
+              <div className="text-4xl mb-4 text-primary-300 transform group-hover:scale-110 transition-transform duration-300 origin-left">
+                <FiMonitor />
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-white">
+                Smart Classrooms
+              </h3>
+              <p className="text-slate-200 text-sm grow leading-relaxed">
+                Experience education in Smart Classrooms equipped with the latest
+                interactive panels that transform traditional lessons into
+                engaging interactive sessions.
+              </p>
             </div>
-            <h3 className="text-xl font-bold mb-3 text-slate-900">
-              Smart Classrooms
-            </h3>
-            <p className="text-slate-600 text-sm grow">
-              Experience education in Smart Classrooms equipped with the latest
-              interactive panels that transform traditional lessons into
-              engaging interactive sessions.
-            </p>
           </AnimatedCard>
 
           <AnimatedCard
             delay={0.4}
-            className="flex flex-col hover:bg-rose-100 hover:scale-105 transition-all duration-300"
+            className="relative overflow-hidden flex flex-col min-h-[380px] group border-none shadow-xl"
+            hoverEffect="lift"
           >
-            <div className="text-4xl mb-4 text-accent">
-              <FiCpu />
+            <Image
+              src="/robotics.jpg"
+              alt="Robotics & Coding"
+              fill
+              sizes="(max-width: 768px) 100vw, 33vw"
+              className="object-cover transition-transform duration-700 group-hover:scale-110"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/70 to-slate-900/30 transition-opacity duration-300 group-hover:opacity-90" />
+            <div className="relative z-10 flex flex-col h-full grow justify-end text-white">
+              <div className="text-4xl mb-4 text-accent transform group-hover:scale-110 transition-transform duration-300 origin-left">
+                <FiCpu />
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-white">
+                Robotics & Coding
+              </h3>
+              <p className="text-slate-200 text-sm grow leading-relaxed">
+                We prepare students for the future with robotics and coding
+                programs designed to teach essential technical skills, encouraging
+                innovation and creativity from an early age.
+              </p>
             </div>
-            <h3 className="text-xl font-bold mb-3 text-slate-900">
-              Robotics & Coding
-            </h3>
-            <p className="text-slate-600 text-sm grow">
-              We prepare students for the future with robotics and coding
-              programs designed to teach essential technical skills, encouraging
-              innovation and creativity from an early age.
-            </p>
           </AnimatedCard>
 
           <AnimatedCard
             delay={0.5}
-            className="flex flex-col lg:col-span-2 hover:bg-violet-100"
+            className="relative overflow-hidden flex flex-col lg:col-span-2 min-h-[380px] group border-none shadow-xl"
+            hoverEffect="lift"
           >
-            <div className="text-4xl mb-4 text-primary-600">
-              <FiCode />
+            <Image
+              src="/activity.jpg"
+              alt="Advanced Computer Lab"
+              fill
+              sizes="(max-width: 1024px) 100vw, 66vw"
+              className="object-cover transition-transform duration-700 group-hover:scale-110"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/70 to-slate-900/30 transition-opacity duration-300 group-hover:opacity-90" />
+            <div className="relative z-10 flex flex-col h-full grow justify-end text-white">
+              <div className="text-4xl mb-4 text-primary-300 transform group-hover:scale-110 transition-transform duration-300 origin-left">
+                <FiCode />
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-white">
+                Advanced Computer Lab
+              </h3>
+              <p className="text-slate-200 text-sm grow leading-relaxed">
+                Our Computer Lab provides comprehensive training from basic to
+                advanced computing skills, ensuring students are tech-savvy and
+                future-ready. We believe in practical, hands-on digital literacy.
+              </p>
             </div>
-            <h3 className="text-xl font-bold mb-3 text-slate-900">
-              Advanced Computer Lab
-            </h3>
-            <p className="text-slate-600 text-sm">
-              Our Computer Lab provides comprehensive training from basic to
-              advanced computing skills, ensuring students are tech-savvy and
-              future-ready. We believe in practical, hands-on digital literacy.
-            </p>
           </AnimatedCard>
         </div>
       </Section>
@@ -234,6 +289,81 @@ export default function AcademicsPage() {
               clubs cultivate language proficiency, enhancing communication
               skills in native dialects.
             </p>
+          </div>
+        </div>
+      </Section>
+
+      <Section
+        title="Jolly Phonics: The Joy of Reading"
+        subtitle="A child-centered, multi-sensory approach to reading and writing that builds core phonics skills in a fun and active way."
+        bg="white"
+      >
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Image Column */}
+          <div className="h-[450px] relative rounded-3xl overflow-hidden shadow-2xl group">
+            <Image
+              src="/jolly_phonics.png"
+              alt="Jolly Phonics Classroom"
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            {/* Elegant overlay card edge */}
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent" />
+          </div>
+
+          {/* Content Column */}
+          <div className="space-y-8">
+            <div className="prose prose-slate">
+              <h3 className="text-2xl font-extrabold text-slate-900 tracking-tight">
+                Empowering Early Readers
+              </h3>
+              <p className="text-slate-600 mt-4 leading-relaxed">
+                Jolly Phonics is a globally-renowned, multi-sensory program that teaches children how to read and write using synthetic phonics. Rather than memorizing words, children learn the letter sounds, enabling them to decode any word they encounter.
+              </p>
+            </div>
+
+            {/* Phonics Pillars */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="p-5 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-md transition-all">
+                <div className="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center text-accent font-bold mb-3">1</div>
+                <h4 className="font-bold text-slate-900 text-base">42 Letter Sounds</h4>
+                <p className="text-xs text-slate-500 mt-1">
+                  Learning the 42 letter sounds, taught in 7 groups through actions and songs.
+                </p>
+              </div>
+              <div className="p-5 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-md transition-all">
+                <div className="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center text-accent font-bold mb-3">2</div>
+                <h4 className="font-bold text-slate-900 text-base">Letter Formation</h4>
+                <p className="text-xs text-slate-500 mt-1">
+                  Using multi-sensory methods to guide fine motor control for cursive writing.
+                </p>
+              </div>
+              <div className="p-5 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-md transition-all">
+                <div className="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center text-accent font-bold mb-3">3</div>
+                <h4 className="font-bold text-slate-900 text-base">Blending Sounds</h4>
+                <p className="text-xs text-slate-500 mt-1">
+                  Combining sounds to easily decode and read unfamiliar words.
+                </p>
+              </div>
+              <div className="p-5 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-md transition-all">
+                <div className="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center text-accent font-bold mb-3">4</div>
+                <h4 className="font-bold text-slate-900 text-base">Segmenting Words</h4>
+                <p className="text-xs text-slate-500 mt-1">
+                  Hearing individual sounds in words to spell them accurately.
+                </p>
+              </div>
+            </div>
+
+            <div className="p-5 rounded-2xl bg-primary-50 border border-primary-100/30 flex gap-4 items-center">
+              <div className="text-3xl">🗣️</div>
+              <div>
+                <h4 className="font-bold text-primary-900 text-sm">International Standard Learning</h4>
+                <p className="text-xs text-primary-700 mt-0.5">
+                  Integrated directly into our primary classes with guidance from TESOL & IELTS specialized teachers.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </Section>

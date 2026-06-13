@@ -35,12 +35,41 @@ export default function Home() {
   const y6 = useTransform(scrollYProgress, [0, 1], [-20, 20]);
 
   const deckCards = [
-    { id: 0, src: "/tree.webp", alt: "Talking Tree", y: y1, x: -30, rotate: -12 },
-    { id: 1, src: "/smart.jpg", alt: "Smart Classroom", y: y3, x: 20, rotate: 8 },
+    {
+      id: 0,
+      src: "/tree.webp",
+      alt: "Talking Tree",
+      y: y1,
+      x: -30,
+      rotate: -12,
+    },
+    {
+      id: 1,
+      src: "/smart.jpg",
+      alt: "Smart Classroom",
+      y: y3,
+      x: 20,
+      rotate: 8,
+    },
     { id: 2, src: "/mat.jpg", alt: "Magik Mat", y: y2, x: -10, rotate: -5 },
     { id: 3, src: "/hero-2.jpg", alt: "Campus Life", y: y4, x: 30, rotate: 12 },
-    { id: 4, src: "/music.jpg", alt: "Music Class", y: y5, x: -20, rotate: -3, imageClass: "object-right" },
-    { id: 5, src: "/hero-4.jpg", alt: "Student Activity", y: y6, x: 10, rotate: 6 },
+    {
+      id: 4,
+      src: "/music.jpg",
+      alt: "Music Class",
+      y: y5,
+      x: -20,
+      rotate: -3,
+      imageClass: "object-right",
+    },
+    {
+      id: 5,
+      src: "/hero-4.jpg",
+      alt: "Student Activity",
+      y: y6,
+      x: 10,
+      rotate: 6,
+    },
   ];
 
   const handleSwipe = () => {
@@ -549,7 +578,12 @@ export default function Home() {
                   onClick={() => {
                     if (isTop) handleSwipe();
                   }}
-                  style={{ y: card.y, x: card.x, rotate: card.rotate, zIndex: (i + 1) * 10 }}
+                  style={{
+                    y: card.y,
+                    x: card.x,
+                    rotate: card.rotate,
+                    zIndex: (i + 1) * 10,
+                  }}
                   whileHover={{ scale: 1.05, rotate: 0, zIndex: 100 }}
                   whileTap={{ scale: 1.05, rotate: 0, zIndex: 100 }}
                   className={`absolute inset-0 m-auto w-[65%] h-[75%] rounded-3xl overflow-hidden shadow-2xl border-[6px] border-white bg-slate-100 transition-colors ${isTop ? "cursor-grab active:cursor-grabbing" : "cursor-pointer"}`}
@@ -633,7 +667,7 @@ export default function Home() {
           >
             <div className="h-64 md:h-72 relative overflow-hidden bg-slate-100">
               <Image
-                src="/arts.jpg"
+                src="/cricket.jpg"
                 alt="Arts & Sports"
                 fill
                 sizes="(max-width: 768px) 100vw, 33vw"
