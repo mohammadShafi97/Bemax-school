@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ReactNode } from "react";
+import { twMerge } from "tailwind-merge";
 
 interface AnimatedCardProps {
   children: ReactNode;
@@ -30,7 +31,11 @@ const AnimatedCard = ({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.5, delay }}
-      className={`bg-white rounded-4xl p-8 border border-slate-100 shadow-lg transition-all duration-300 ${hoverStyles[hoverEffect]} ${className}`}
+      className={twMerge(
+        "bg-white rounded-4xl p-8 border border-slate-100 shadow-lg transition-all duration-300",
+        hoverStyles[hoverEffect],
+        className
+      )}
     >
       {children}
     </motion.div>

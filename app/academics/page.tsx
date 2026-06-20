@@ -369,6 +369,140 @@ export default function AcademicsPage() {
       </Section>
 
       <Section
+        title="Find Your Circle: Our Clubs"
+        subtitle="Unleash your potential, connect with peers, and level up your skills in our student-led clubs."
+        bg="primary"
+      >
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Malayalam Club */}
+          <AnimatedCard
+            delay={0.05}
+            hoverEffect="glow"
+            className="group relative overflow-hidden bg-white/5 backdrop-blur-lg border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition-all duration-300 shadow-[0_8px_32px_0_rgba(0,0,0,0.1)]"
+          >
+            <div className="absolute top-0 right-0 w-32 h-32 bg-rose-500/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="flex justify-between items-start mb-6">
+              <span className="text-4xl filter drop-shadow-lg">✍️</span>
+              <span className="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-rose-500/20 text-rose-200 border border-rose-400/30 shadow-inner">
+                Linguistic & Culture
+              </span>
+            </div>
+            <h3 className="text-xl font-extrabold text-white mb-3 group-hover:text-accent transition-colors">
+              Malayalam Club
+            </h3>
+            <p className="text-primary-100 text-sm leading-relaxed">
+              Explore the beauty of Kerala's heritage, literature, and poetry. Cultivate native speaking eloquence, creative writing, and local pride.
+            </p>
+          </AnimatedCard>
+
+          {/* English Club */}
+          <AnimatedCard
+            delay={0.1}
+            hoverEffect="glow"
+            className="group relative overflow-hidden bg-white/5 backdrop-blur-lg border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition-all duration-300 shadow-[0_8px_32px_0_rgba(0,0,0,0.1)]"
+          >
+            <div className="absolute top-0 right-0 w-32 h-32 bg-sky-500/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="flex justify-between items-start mb-6">
+              <span className="text-4xl filter drop-shadow-lg">🎤</span>
+              <span className="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-sky-500/20 text-sky-200 border border-sky-400/30 shadow-inner">
+                Global Fluency
+              </span>
+            </div>
+            <h3 className="text-xl font-extrabold text-white mb-3 group-hover:text-sky-300 transition-colors">
+              English Club
+            </h3>
+            <p className="text-primary-100 text-sm leading-relaxed">
+              Master debate, presentation skills, and fluency. Spearheaded by IELTS mentors to ensure confident public speaking.
+            </p>
+          </AnimatedCard>
+
+          {/* Special Evening Clubs */}
+          <AnimatedCard
+            delay={0.15}
+            hoverEffect="glow"
+            className="group relative overflow-hidden bg-white/5 backdrop-blur-lg border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition-all duration-300 shadow-[0_8px_32px_0_rgba(0,0,0,0.1)]"
+          >
+            <div className="absolute top-0 right-0 w-32 h-32 bg-violet-500/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="flex justify-between items-start mb-6">
+              <span className="text-4xl filter drop-shadow-lg">🌙</span>
+              <span className="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-violet-500/20 text-violet-200 border border-violet-400/30 shadow-inner">
+                Academic Support
+              </span>
+            </div>
+            <h3 className="text-xl font-extrabold text-white mb-3 group-hover:text-violet-300 transition-colors">
+              Special Evening Clubs
+            </h3>
+            <p className="text-primary-100 text-sm leading-relaxed">
+              Dedicated coaching support in math, science labs, and homework check-ins, creating a collaborative environment after hours.
+            </p>
+          </AnimatedCard>
+
+          {/* Sports Club */}
+          <AnimatedCard
+            delay={0.2}
+            hoverEffect="glow"
+            className="group relative overflow-hidden bg-white/5 backdrop-blur-lg border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition-all duration-300 shadow-[0_8px_32px_0_rgba(0,0,0,0.1)]"
+          >
+            <div className="absolute top-0 right-0 w-32 h-32 bg-green-500/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="flex justify-between items-start mb-6">
+              <span className="text-4xl filter drop-shadow-lg">🏆</span>
+              <span className="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-green-500/20 text-green-200 border border-green-400/30 shadow-inner">
+                Athletic Elite
+              </span>
+            </div>
+            <h3 className="text-xl font-extrabold text-white mb-3 group-hover:text-green-300 transition-colors">
+              Sports Club
+            </h3>
+            <p className="text-primary-100 text-sm leading-relaxed">
+              Focus on physical agility, fitness, team tactics, and active tournament training for football, cricket, and swimming.
+            </p>
+          </AnimatedCard>
+
+          {/* Arts Club */}
+          <AnimatedCard
+            delay={0.25}
+            hoverEffect="glow"
+            className="group relative overflow-hidden bg-white/5 backdrop-blur-lg border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition-all duration-300 shadow-[0_8px_32px_0_rgba(0,0,0,0.1)]"
+          >
+            <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="flex justify-between items-start mb-6">
+              <span className="text-4xl filter drop-shadow-lg">🎨</span>
+              <span className="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-amber-500/20 text-amber-200 border border-amber-400/30 shadow-inner">
+                Creative Studio
+              </span>
+            </div>
+            <h3 className="text-xl font-extrabold text-white mb-3 group-hover:text-amber-300 transition-colors">
+              Arts Club
+            </h3>
+            <p className="text-primary-100 text-sm leading-relaxed">
+              Dive into sketching, shading, painting, and clay modelling. Showcase your creations in school galleries and state contests.
+            </p>
+          </AnimatedCard>
+
+          {/* Yoga Club */}
+          <AnimatedCard
+            delay={0.3}
+            hoverEffect="glow"
+            className="group relative overflow-hidden bg-white/5 backdrop-blur-lg border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition-all duration-300 shadow-[0_8px_32px_0_rgba(0,0,0,0.1)]"
+          >
+            <div className="absolute top-0 right-0 w-32 h-32 bg-pink-500/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="flex justify-between items-start mb-6">
+              <span className="text-4xl filter drop-shadow-lg">🧘</span>
+              <span className="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-pink-500/20 text-pink-200 border border-pink-400/30 shadow-inner">
+                Mind & Body Zen
+              </span>
+            </div>
+            <h3 className="text-xl font-extrabold text-white mb-3 group-hover:text-pink-300 transition-colors">
+              Yoga Club
+            </h3>
+            <p className="text-primary-100 text-sm leading-relaxed">
+              Develop flexibility, mental well-being, and posture control. Breathe, flow, and align mind with body.
+            </p>
+          </AnimatedCard>
+        </div>
+      </Section>
+
+      <Section
         title="Beyond the Textbook"
         subtitle="Cultivating Intellect and Character"
         bg="slate"
