@@ -33,86 +33,141 @@ export default function AcademicsPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <AnimatedCard
             delay={0.1}
-            className="flex flex-col hover:bg-green-100 hover:scale-105 transition-all duration-300"
+            className="relative overflow-hidden flex flex-col min-h-[380px] group border-none shadow-xl"
+            hoverEffect="lift"
           >
-            <div className="text-4xl mb-4">🌳</div>
-            <h3 className="text-xl font-bold mb-3 text-slate-900">
-              My Talking Tree
-            </h3>
-            <p className="text-slate-600 text-sm grow">
-              Say hello to our AI-integrated robotic tree that brings joy and
-              interactivity to children's learning. This tree engages children
-              with fun educational content by seamlessly connecting to the
-              screen. It serves as a dynamic learning platform that can be
-              personalized.
-            </p>
+            <Image
+              src="/tree.webp"
+              alt="My Talking Tree"
+              fill
+              sizes="(max-width: 768px) 100vw, 33vw"
+              className="object-cover transition-transform duration-700 group-hover:scale-110"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/70 to-slate-900/30 transition-opacity duration-300 group-hover:opacity-90" />
+            <div className="relative z-10 flex flex-col h-full grow justify-end text-white">
+              <div className="text-4xl mb-4 transform group-hover:scale-110 transition-transform duration-300 origin-left">🌳</div>
+              <h3 className="text-xl font-bold mb-3 text-white">
+                My Talking Tree
+              </h3>
+              <p className="text-slate-200 text-sm grow leading-relaxed">
+                Say hello to our AI-integrated robotic tree that brings joy and
+                interactivity to children's learning. This tree engages children
+                with fun educational content by seamlessly connecting to the
+                screen. It serves as a dynamic learning platform that can be
+                personalized.
+              </p>
+            </div>
           </AnimatedCard>
 
           <AnimatedCard
             delay={0.2}
-            className="flex flex-col hover:bg-yellow-100 hover:scale-105 transition-all duration-300"
+            className="relative overflow-hidden flex flex-col min-h-[380px] group border-none shadow-xl"
+            hoverEffect="lift"
           >
-            <div className="text-4xl mb-4">🏃‍♂️</div>
-            <h3 className="text-xl font-bold mb-3 text-slate-900">
-              The Magik Mat
-            </h3>
-            <p className="text-slate-600 text-sm grow">
-              Moving beyond traditional desks, the Magik Mat enhances learning
-              with fun educational games focused on numbers and the alphabet. By
-              jumping on letters, children solve quizzes that foster mind-body
-              coordination.
-            </p>
+            <Image
+              src="/mat.jpg"
+              alt="The Magik Mat"
+              fill
+              sizes="(max-width: 768px) 100vw, 33vw"
+              className="object-cover transition-transform duration-700 group-hover:scale-110"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/70 to-slate-900/30 transition-opacity duration-300 group-hover:opacity-90" />
+            <div className="relative z-10 flex flex-col h-full grow justify-end text-white">
+              <div className="text-4xl mb-4 transform group-hover:scale-110 transition-transform duration-300 origin-left">🏃‍♂️</div>
+              <h3 className="text-xl font-bold mb-3 text-white">
+                The Magik Mat
+              </h3>
+              <p className="text-slate-200 text-sm grow leading-relaxed">
+                Moving beyond traditional desks, the Magik Mat enhances learning
+                with fun educational games focused on numbers and the alphabet. By
+                jumping on letters, children solve quizzes that foster mind-body
+                coordination.
+              </p>
+            </div>
           </AnimatedCard>
 
           <AnimatedCard
             delay={0.3}
-            className="flex flex-col hover:bg-sky-100 hover:scale-105 transition-all duration-300"
+            className="relative overflow-hidden flex flex-col min-h-[380px] group border-none shadow-xl"
+            hoverEffect="lift"
           >
-            <div className="text-4xl mb-4 text-primary-500">
-              <FiMonitor />
+            <Image
+              src="/smart.jpg"
+              alt="Smart Classrooms"
+              fill
+              sizes="(max-width: 768px) 100vw, 33vw"
+              className="object-cover transition-transform duration-700 group-hover:scale-110"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/70 to-slate-900/30 transition-opacity duration-300 group-hover:opacity-90" />
+            <div className="relative z-10 flex flex-col h-full grow justify-end text-white">
+              <div className="text-4xl mb-4 text-primary-300 transform group-hover:scale-110 transition-transform duration-300 origin-left">
+                <FiMonitor />
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-white">
+                Smart Classrooms
+              </h3>
+              <p className="text-slate-200 text-sm grow leading-relaxed">
+                Experience education in Smart Classrooms equipped with the latest
+                interactive panels that transform traditional lessons into
+                engaging interactive sessions.
+              </p>
             </div>
-            <h3 className="text-xl font-bold mb-3 text-slate-900">
-              Smart Classrooms
-            </h3>
-            <p className="text-slate-600 text-sm grow">
-              Experience education in Smart Classrooms equipped with the latest
-              interactive panels that transform traditional lessons into
-              engaging interactive sessions.
-            </p>
           </AnimatedCard>
 
           <AnimatedCard
             delay={0.4}
-            className="flex flex-col hover:bg-rose-100 hover:scale-105 transition-all duration-300"
+            className="relative overflow-hidden flex flex-col min-h-[380px] group border-none shadow-xl"
+            hoverEffect="lift"
           >
-            <div className="text-4xl mb-4 text-accent">
-              <FiCpu />
+            <Image
+              src="/robotics.jpg"
+              alt="Robotics & Coding"
+              fill
+              sizes="(max-width: 768px) 100vw, 33vw"
+              className="object-cover transition-transform duration-700 group-hover:scale-110"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/70 to-slate-900/30 transition-opacity duration-300 group-hover:opacity-90" />
+            <div className="relative z-10 flex flex-col h-full grow justify-end text-white">
+              <div className="text-4xl mb-4 text-accent transform group-hover:scale-110 transition-transform duration-300 origin-left">
+                <FiCpu />
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-white">
+                Robotics & Coding
+              </h3>
+              <p className="text-slate-200 text-sm grow leading-relaxed">
+                We prepare students for the future with robotics and coding
+                programs designed to teach essential technical skills, encouraging
+                innovation and creativity from an early age.
+              </p>
             </div>
-            <h3 className="text-xl font-bold mb-3 text-slate-900">
-              Robotics & Coding
-            </h3>
-            <p className="text-slate-600 text-sm grow">
-              We prepare students for the future with robotics and coding
-              programs designed to teach essential technical skills, encouraging
-              innovation and creativity from an early age.
-            </p>
           </AnimatedCard>
 
           <AnimatedCard
             delay={0.5}
-            className="flex flex-col lg:col-span-2 hover:bg-violet-100"
+            className="relative overflow-hidden flex flex-col lg:col-span-2 min-h-[380px] group border-none shadow-xl"
+            hoverEffect="lift"
           >
-            <div className="text-4xl mb-4 text-primary-600">
-              <FiCode />
+            <Image
+              src="/activity.jpg"
+              alt="Advanced Computer Lab"
+              fill
+              sizes="(max-width: 1024px) 100vw, 66vw"
+              className="object-cover transition-transform duration-700 group-hover:scale-110"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/70 to-slate-900/30 transition-opacity duration-300 group-hover:opacity-90" />
+            <div className="relative z-10 flex flex-col h-full grow justify-end text-white">
+              <div className="text-4xl mb-4 text-primary-300 transform group-hover:scale-110 transition-transform duration-300 origin-left">
+                <FiCode />
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-white">
+                Advanced Computer Lab
+              </h3>
+              <p className="text-slate-200 text-sm grow leading-relaxed">
+                Our Computer Lab provides comprehensive training from basic to
+                advanced computing skills, ensuring students are tech-savvy and
+                future-ready. We believe in practical, hands-on digital literacy.
+              </p>
             </div>
-            <h3 className="text-xl font-bold mb-3 text-slate-900">
-              Advanced Computer Lab
-            </h3>
-            <p className="text-slate-600 text-sm">
-              Our Computer Lab provides comprehensive training from basic to
-              advanced computing skills, ensuring students are tech-savvy and
-              future-ready. We believe in practical, hands-on digital literacy.
-            </p>
           </AnimatedCard>
         </div>
       </Section>
@@ -235,6 +290,215 @@ export default function AcademicsPage() {
               skills in native dialects.
             </p>
           </div>
+        </div>
+      </Section>
+
+      <Section
+        title="Jolly Phonics: The Joy of Reading"
+        subtitle="A child-centered, multi-sensory approach to reading and writing that builds core phonics skills in a fun and active way."
+        bg="white"
+      >
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Image Column */}
+          <div className="h-[450px] relative rounded-3xl overflow-hidden shadow-2xl group">
+            <Image
+              src="/jolly_phonics.png"
+              alt="Jolly Phonics Classroom"
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            {/* Elegant overlay card edge */}
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent" />
+          </div>
+
+          {/* Content Column */}
+          <div className="space-y-8">
+            <div className="prose prose-slate">
+              <h3 className="text-2xl font-extrabold text-slate-900 tracking-tight">
+                Empowering Early Readers
+              </h3>
+              <p className="text-slate-600 mt-4 leading-relaxed">
+                Jolly Phonics is a globally-renowned, multi-sensory program that teaches children how to read and write using synthetic phonics. Rather than memorizing words, children learn the letter sounds, enabling them to decode any word they encounter.
+              </p>
+            </div>
+
+            {/* Phonics Pillars */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="p-5 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-md transition-all">
+                <div className="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center text-accent font-bold mb-3">1</div>
+                <h4 className="font-bold text-slate-900 text-base">42 Letter Sounds</h4>
+                <p className="text-xs text-slate-500 mt-1">
+                  Learning the 42 letter sounds, taught in 7 groups through actions and songs.
+                </p>
+              </div>
+              <div className="p-5 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-md transition-all">
+                <div className="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center text-accent font-bold mb-3">2</div>
+                <h4 className="font-bold text-slate-900 text-base">Letter Formation</h4>
+                <p className="text-xs text-slate-500 mt-1">
+                  Using multi-sensory methods to guide fine motor control for cursive writing.
+                </p>
+              </div>
+              <div className="p-5 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-md transition-all">
+                <div className="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center text-accent font-bold mb-3">3</div>
+                <h4 className="font-bold text-slate-900 text-base">Blending Sounds</h4>
+                <p className="text-xs text-slate-500 mt-1">
+                  Combining sounds to easily decode and read unfamiliar words.
+                </p>
+              </div>
+              <div className="p-5 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-md transition-all">
+                <div className="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center text-accent font-bold mb-3">4</div>
+                <h4 className="font-bold text-slate-900 text-base">Segmenting Words</h4>
+                <p className="text-xs text-slate-500 mt-1">
+                  Hearing individual sounds in words to spell them accurately.
+                </p>
+              </div>
+            </div>
+
+            <div className="p-5 rounded-2xl bg-primary-50 border border-primary-100/30 flex gap-4 items-center">
+              <div className="text-3xl">🗣️</div>
+              <div>
+                <h4 className="font-bold text-primary-900 text-sm">International Standard Learning</h4>
+                <p className="text-xs text-primary-700 mt-0.5">
+                  Integrated directly into our primary classes with guidance from TESOL & IELTS specialized teachers.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      <Section
+        title="Find Your Circle: Our Clubs"
+        subtitle="Unleash your potential, connect with peers, and level up your skills in our student-led clubs."
+        bg="primary"
+      >
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Malayalam Club */}
+          <AnimatedCard
+            delay={0.05}
+            hoverEffect="glow"
+            className="group relative overflow-hidden bg-white/5 backdrop-blur-lg border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition-all duration-300 shadow-[0_8px_32px_0_rgba(0,0,0,0.1)]"
+          >
+            <div className="absolute top-0 right-0 w-32 h-32 bg-rose-500/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="flex justify-between items-start mb-6">
+              <span className="text-4xl filter drop-shadow-lg">✍️</span>
+              <span className="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-rose-500/20 text-rose-200 border border-rose-400/30 shadow-inner">
+                Linguistic & Culture
+              </span>
+            </div>
+            <h3 className="text-xl font-extrabold text-white mb-3 group-hover:text-accent transition-colors">
+              Malayalam Club
+            </h3>
+            <p className="text-primary-100 text-sm leading-relaxed">
+              Explore the beauty of Kerala's heritage, literature, and poetry. Cultivate native speaking eloquence, creative writing, and local pride.
+            </p>
+          </AnimatedCard>
+
+          {/* English Club */}
+          <AnimatedCard
+            delay={0.1}
+            hoverEffect="glow"
+            className="group relative overflow-hidden bg-white/5 backdrop-blur-lg border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition-all duration-300 shadow-[0_8px_32px_0_rgba(0,0,0,0.1)]"
+          >
+            <div className="absolute top-0 right-0 w-32 h-32 bg-sky-500/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="flex justify-between items-start mb-6">
+              <span className="text-4xl filter drop-shadow-lg">🎤</span>
+              <span className="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-sky-500/20 text-sky-200 border border-sky-400/30 shadow-inner">
+                Global Fluency
+              </span>
+            </div>
+            <h3 className="text-xl font-extrabold text-white mb-3 group-hover:text-sky-300 transition-colors">
+              English Club
+            </h3>
+            <p className="text-primary-100 text-sm leading-relaxed">
+              Master debate, presentation skills, and fluency. Spearheaded by IELTS mentors to ensure confident public speaking.
+            </p>
+          </AnimatedCard>
+
+          {/* Special Evening Clubs */}
+          <AnimatedCard
+            delay={0.15}
+            hoverEffect="glow"
+            className="group relative overflow-hidden bg-white/5 backdrop-blur-lg border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition-all duration-300 shadow-[0_8px_32px_0_rgba(0,0,0,0.1)]"
+          >
+            <div className="absolute top-0 right-0 w-32 h-32 bg-violet-500/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="flex justify-between items-start mb-6">
+              <span className="text-4xl filter drop-shadow-lg">🌙</span>
+              <span className="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-violet-500/20 text-violet-200 border border-violet-400/30 shadow-inner">
+                Academic Support
+              </span>
+            </div>
+            <h3 className="text-xl font-extrabold text-white mb-3 group-hover:text-violet-300 transition-colors">
+              Special Evening Clubs
+            </h3>
+            <p className="text-primary-100 text-sm leading-relaxed">
+              Dedicated coaching support in math, science labs, and homework check-ins, creating a collaborative environment after hours.
+            </p>
+          </AnimatedCard>
+
+          {/* Sports Club */}
+          <AnimatedCard
+            delay={0.2}
+            hoverEffect="glow"
+            className="group relative overflow-hidden bg-white/5 backdrop-blur-lg border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition-all duration-300 shadow-[0_8px_32px_0_rgba(0,0,0,0.1)]"
+          >
+            <div className="absolute top-0 right-0 w-32 h-32 bg-green-500/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="flex justify-between items-start mb-6">
+              <span className="text-4xl filter drop-shadow-lg">🏆</span>
+              <span className="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-green-500/20 text-green-200 border border-green-400/30 shadow-inner">
+                Athletic Elite
+              </span>
+            </div>
+            <h3 className="text-xl font-extrabold text-white mb-3 group-hover:text-green-300 transition-colors">
+              Sports Club
+            </h3>
+            <p className="text-primary-100 text-sm leading-relaxed">
+              Focus on physical agility, fitness, team tactics, and active tournament training for football, cricket, and swimming.
+            </p>
+          </AnimatedCard>
+
+          {/* Arts Club */}
+          <AnimatedCard
+            delay={0.25}
+            hoverEffect="glow"
+            className="group relative overflow-hidden bg-white/5 backdrop-blur-lg border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition-all duration-300 shadow-[0_8px_32px_0_rgba(0,0,0,0.1)]"
+          >
+            <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="flex justify-between items-start mb-6">
+              <span className="text-4xl filter drop-shadow-lg">🎨</span>
+              <span className="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-amber-500/20 text-amber-200 border border-amber-400/30 shadow-inner">
+                Creative Studio
+              </span>
+            </div>
+            <h3 className="text-xl font-extrabold text-white mb-3 group-hover:text-amber-300 transition-colors">
+              Arts Club
+            </h3>
+            <p className="text-primary-100 text-sm leading-relaxed">
+              Dive into sketching, shading, painting, and clay modelling. Showcase your creations in school galleries and state contests.
+            </p>
+          </AnimatedCard>
+
+          {/* Yoga Club */}
+          <AnimatedCard
+            delay={0.3}
+            hoverEffect="glow"
+            className="group relative overflow-hidden bg-white/5 backdrop-blur-lg border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition-all duration-300 shadow-[0_8px_32px_0_rgba(0,0,0,0.1)]"
+          >
+            <div className="absolute top-0 right-0 w-32 h-32 bg-pink-500/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="flex justify-between items-start mb-6">
+              <span className="text-4xl filter drop-shadow-lg">🧘</span>
+              <span className="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-pink-500/20 text-pink-200 border border-pink-400/30 shadow-inner">
+                Mind & Body Zen
+              </span>
+            </div>
+            <h3 className="text-xl font-extrabold text-white mb-3 group-hover:text-pink-300 transition-colors">
+              Yoga Club
+            </h3>
+            <p className="text-primary-100 text-sm leading-relaxed">
+              Develop flexibility, mental well-being, and posture control. Breathe, flow, and align mind with body.
+            </p>
+          </AnimatedCard>
         </div>
       </Section>
 

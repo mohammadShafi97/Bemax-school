@@ -184,11 +184,53 @@ const galleryData: MediaItem[] = [
     caption: "Fancy Dress competiton",
   },
   {
+    id: Date.now(),
+    type: "image",
+    src: "/cricket.jpg",
+    category: "Extracurriculars",
+    caption: "cricket game",
+  },
+  {
     id: 27,
     type: "image",
     src: "/gallery-8.jpg",
     category: "Extracurriculars",
     caption: "Food Fest",
+  },
+  {
+    id: 30,
+    type: "image",
+    src: "/anual-1.jpg",
+    category: "Extracurriculars",
+    caption: "Annual Day Dance Performance",
+  },
+  {
+    id: 31,
+    type: "image",
+    src: "/anual-2.jpg",
+    category: "Extracurriculars",
+    caption: "Vibrant Stage Celebrations",
+  },
+  {
+    id: 32,
+    type: "image",
+    src: "/anual-3.jpg",
+    category: "Extracurriculars",
+    caption: "Annual Cultural Fest",
+  },
+  {
+    id: 33,
+    type: "image",
+    src: "/anual-4.jpg",
+    category: "Extracurriculars",
+    caption: "Expressive Classical Stage Performance",
+  },
+  {
+    id: 34,
+    type: "image",
+    src: "/anual-5.jpg",
+    category: "Extracurriculars",
+    caption: "Vibrant Costumes & Stage Formations",
   },
 
   // Health
