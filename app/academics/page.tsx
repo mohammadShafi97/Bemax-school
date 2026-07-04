@@ -43,9 +43,11 @@ export default function AcademicsPage() {
               sizes="(max-width: 768px) 100vw, 33vw"
               className="object-cover transition-transform duration-700 group-hover:scale-110"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/70 to-slate-900/30 transition-opacity duration-300 group-hover:opacity-90" />
+            <div className="absolute inset-0 bg-linear-to-t from-slate-950 via-slate-900/70 to-slate-900/30 transition-opacity duration-300 group-hover:opacity-90" />
             <div className="relative z-10 flex flex-col h-full grow justify-end text-white">
-              <div className="text-4xl mb-4 transform group-hover:scale-110 transition-transform duration-300 origin-left">🌳</div>
+              <div className="text-4xl mb-4 transform group-hover:scale-110 transition-transform duration-300 origin-left">
+                🌳
+              </div>
               <h3 className="text-xl font-bold mb-3 text-white">
                 My Talking Tree
               </h3>
@@ -73,15 +75,17 @@ export default function AcademicsPage() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/70 to-slate-900/30 transition-opacity duration-300 group-hover:opacity-90" />
             <div className="relative z-10 flex flex-col h-full grow justify-end text-white">
-              <div className="text-4xl mb-4 transform group-hover:scale-110 transition-transform duration-300 origin-left">🏃‍♂️</div>
+              <div className="text-4xl mb-4 transform group-hover:scale-110 transition-transform duration-300 origin-left">
+                🏃‍♂️
+              </div>
               <h3 className="text-xl font-bold mb-3 text-white">
                 The Magik Mat
               </h3>
               <p className="text-slate-200 text-sm grow leading-relaxed">
                 Moving beyond traditional desks, the Magik Mat enhances learning
-                with fun educational games focused on numbers and the alphabet. By
-                jumping on letters, children solve quizzes that foster mind-body
-                coordination.
+                with fun educational games focused on numbers and the alphabet.
+                By jumping on letters, children solve quizzes that foster
+                mind-body coordination.
               </p>
             </div>
           </AnimatedCard>
@@ -107,9 +111,9 @@ export default function AcademicsPage() {
                 Smart Classrooms
               </h3>
               <p className="text-slate-200 text-sm grow leading-relaxed">
-                Experience education in Smart Classrooms equipped with the latest
-                interactive panels that transform traditional lessons into
-                engaging interactive sessions.
+                Experience education in Smart Classrooms equipped with the
+                latest interactive panels that transform traditional lessons
+                into engaging interactive sessions.
               </p>
             </div>
           </AnimatedCard>
@@ -136,8 +140,8 @@ export default function AcademicsPage() {
               </h3>
               <p className="text-slate-200 text-sm grow leading-relaxed">
                 We prepare students for the future with robotics and coding
-                programs designed to teach essential technical skills, encouraging
-                innovation and creativity from an early age.
+                programs designed to teach essential technical skills,
+                encouraging innovation and creativity from an early age.
               </p>
             </div>
           </AnimatedCard>
@@ -148,7 +152,7 @@ export default function AcademicsPage() {
             hoverEffect="lift"
           >
             <Image
-              src="/activity.jpg"
+              src="/lab.jpeg"
               alt="Advanced Computer Lab"
               fill
               sizes="(max-width: 1024px) 100vw, 66vw"
@@ -165,7 +169,8 @@ export default function AcademicsPage() {
               <p className="text-slate-200 text-sm grow leading-relaxed">
                 Our Computer Lab provides comprehensive training from basic to
                 advanced computing skills, ensuring students are tech-savvy and
-                future-ready. We believe in practical, hands-on digital literacy.
+                future-ready. We believe in practical, hands-on digital
+                literacy.
               </p>
             </div>
           </AnimatedCard>
@@ -319,36 +324,57 @@ export default function AcademicsPage() {
                 Empowering Early Readers
               </h3>
               <p className="text-slate-600 mt-4 leading-relaxed">
-                Jolly Phonics is a globally-renowned, multi-sensory program that teaches children how to read and write using synthetic phonics. Rather than memorizing words, children learn the letter sounds, enabling them to decode any word they encounter.
+                Jolly Phonics is a globally-renowned, multi-sensory program that
+                teaches children how to read and write using synthetic phonics.
+                Rather than memorizing words, children learn the letter sounds,
+                enabling them to decode any word they encounter.
               </p>
             </div>
 
             {/* Phonics Pillars */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="p-5 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-md transition-all">
-                <div className="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center text-accent font-bold mb-3">1</div>
-                <h4 className="font-bold text-slate-900 text-base">42 Letter Sounds</h4>
+                <div className="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center text-accent font-bold mb-3">
+                  1
+                </div>
+                <h4 className="font-bold text-slate-900 text-base">
+                  42 Letter Sounds
+                </h4>
                 <p className="text-xs text-slate-500 mt-1">
-                  Learning the 42 letter sounds, taught in 7 groups through actions and songs.
+                  Learning the 42 letter sounds, taught in 7 groups through
+                  actions and songs.
                 </p>
               </div>
               <div className="p-5 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-md transition-all">
-                <div className="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center text-accent font-bold mb-3">2</div>
-                <h4 className="font-bold text-slate-900 text-base">Letter Formation</h4>
+                <div className="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center text-accent font-bold mb-3">
+                  2
+                </div>
+                <h4 className="font-bold text-slate-900 text-base">
+                  Letter Formation
+                </h4>
                 <p className="text-xs text-slate-500 mt-1">
-                  Using multi-sensory methods to guide fine motor control for cursive writing.
+                  Using multi-sensory methods to guide fine motor control for
+                  cursive writing.
                 </p>
               </div>
               <div className="p-5 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-md transition-all">
-                <div className="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center text-accent font-bold mb-3">3</div>
-                <h4 className="font-bold text-slate-900 text-base">Blending Sounds</h4>
+                <div className="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center text-accent font-bold mb-3">
+                  3
+                </div>
+                <h4 className="font-bold text-slate-900 text-base">
+                  Blending Sounds
+                </h4>
                 <p className="text-xs text-slate-500 mt-1">
                   Combining sounds to easily decode and read unfamiliar words.
                 </p>
               </div>
               <div className="p-5 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-md transition-all">
-                <div className="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center text-accent font-bold mb-3">4</div>
-                <h4 className="font-bold text-slate-900 text-base">Segmenting Words</h4>
+                <div className="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center text-accent font-bold mb-3">
+                  4
+                </div>
+                <h4 className="font-bold text-slate-900 text-base">
+                  Segmenting Words
+                </h4>
                 <p className="text-xs text-slate-500 mt-1">
                   Hearing individual sounds in words to spell them accurately.
                 </p>
@@ -358,9 +384,12 @@ export default function AcademicsPage() {
             <div className="p-5 rounded-2xl bg-primary-50 border border-primary-100/30 flex gap-4 items-center">
               <div className="text-3xl">🗣️</div>
               <div>
-                <h4 className="font-bold text-primary-900 text-sm">International Standard Learning</h4>
+                <h4 className="font-bold text-primary-900 text-sm">
+                  International Standard Learning
+                </h4>
                 <p className="text-xs text-primary-700 mt-0.5">
-                  Integrated directly into our primary classes with guidance from TESOL & IELTS specialized teachers.
+                  Integrated directly into our primary classes with guidance
+                  from TESOL & IELTS specialized teachers.
                 </p>
               </div>
             </div>
@@ -391,7 +420,9 @@ export default function AcademicsPage() {
               Malayalam Club
             </h3>
             <p className="text-primary-100 text-sm leading-relaxed">
-              Explore the beauty of Kerala's heritage, literature, and poetry. Cultivate native speaking eloquence, creative writing, and local pride.
+              Explore the beauty of Kerala's heritage, literature, and poetry.
+              Cultivate native speaking eloquence, creative writing, and local
+              pride.
             </p>
           </AnimatedCard>
 
@@ -412,7 +443,8 @@ export default function AcademicsPage() {
               English Club
             </h3>
             <p className="text-primary-100 text-sm leading-relaxed">
-              Master debate, presentation skills, and fluency. Spearheaded by IELTS mentors to ensure confident public speaking.
+              Master debate, presentation skills, and fluency. Spearheaded by
+              IELTS mentors to ensure confident public speaking.
             </p>
           </AnimatedCard>
 
@@ -433,7 +465,8 @@ export default function AcademicsPage() {
               Special Evening Clubs
             </h3>
             <p className="text-primary-100 text-sm leading-relaxed">
-              Dedicated coaching support in math, science labs, and homework check-ins, creating a collaborative environment after hours.
+              Dedicated coaching support in math, science labs, and homework
+              check-ins, creating a collaborative environment after hours.
             </p>
           </AnimatedCard>
 
@@ -454,7 +487,8 @@ export default function AcademicsPage() {
               Sports Club
             </h3>
             <p className="text-primary-100 text-sm leading-relaxed">
-              Focus on physical agility, fitness, team tactics, and active tournament training for football, cricket, and swimming.
+              Focus on physical agility, fitness, team tactics, and active
+              tournament training for football, cricket, and swimming.
             </p>
           </AnimatedCard>
 
@@ -475,7 +509,8 @@ export default function AcademicsPage() {
               Arts Club
             </h3>
             <p className="text-primary-100 text-sm leading-relaxed">
-              Dive into sketching, shading, painting, and clay modelling. Showcase your creations in school galleries and state contests.
+              Dive into sketching, shading, painting, and clay modelling.
+              Showcase your creations in school galleries and state contests.
             </p>
           </AnimatedCard>
 
@@ -496,7 +531,8 @@ export default function AcademicsPage() {
               Yoga Club
             </h3>
             <p className="text-primary-100 text-sm leading-relaxed">
-              Develop flexibility, mental well-being, and posture control. Breathe, flow, and align mind with body.
+              Develop flexibility, mental well-being, and posture control.
+              Breathe, flow, and align mind with body.
             </p>
           </AnimatedCard>
         </div>
