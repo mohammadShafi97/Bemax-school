@@ -75,13 +75,17 @@ export default function BeyondAcademicsPage() {
         </div>
       </Section>
 
-      <Section title="Vibrant Co-Curricular & Extra-Curricular Activities" bg="white">
+      <Section
+        title="Vibrant Co-Curricular & Extra-Curricular Activities"
+        bg="white"
+      >
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           <AnimatedCard delay={0.05} className="hover:bg-sky-50">
             <div className="text-4xl mb-4">🏊</div>
             <h3 className="text-xl font-bold mb-3 text-slate-900">Swimming</h3>
             <p className="text-slate-600 text-sm">
-              Enhances core strength, cardiovascular health, and water safety skills in a supportive, professional environment.
+              Enhances core strength, cardiovascular health, and water safety
+              skills in a supportive, professional environment.
             </p>
           </AnimatedCard>
 
@@ -89,7 +93,8 @@ export default function BeyondAcademicsPage() {
             <div className="text-4xl mb-4">🥋</div>
             <h3 className="text-xl font-bold mb-3 text-slate-900">Karate</h3>
             <p className="text-slate-600 text-sm">
-              Builds self-defense techniques, physical fitness, mental discipline, and respect for self and others.
+              Builds self-defense techniques, physical fitness, mental
+              discipline, and respect for self and others.
             </p>
           </AnimatedCard>
 
@@ -97,15 +102,19 @@ export default function BeyondAcademicsPage() {
             <div className="text-4xl mb-4">🧘</div>
             <h3 className="text-xl font-bold mb-3 text-slate-900">Yoga Club</h3>
             <p className="text-slate-600 text-sm">
-              Promotes mindfulness, flexibility, and concentration through physical postures and breathing exercises.
+              Promotes mindfulness, flexibility, and concentration through
+              physical postures and breathing exercises.
             </p>
           </AnimatedCard>
 
           <AnimatedCard delay={0.2} className="hover:bg-orange-50">
             <div className="text-4xl mb-4">🏇</div>
-            <h3 className="text-xl font-bold mb-3 text-slate-900">Horse Riding</h3>
+            <h3 className="text-xl font-bold mb-3 text-slate-900">
+              Horse Riding
+            </h3>
             <p className="text-slate-600 text-sm">
-              Develops posture, balance, coordination, and confidence while bonding with animals in a safe, guided setting.
+              Develops posture, balance, coordination, and confidence while
+              bonding with animals in a safe, guided setting.
             </p>
           </AnimatedCard>
 
@@ -113,7 +122,8 @@ export default function BeyondAcademicsPage() {
             <div className="text-4xl mb-4">🛼</div>
             <h3 className="text-xl font-bold mb-3 text-slate-900">Skating</h3>
             <p className="text-slate-600 text-sm">
-              Improves lower-body strength, reflexes, and balance through fun, expert-led training sessions on wheels.
+              Improves lower-body strength, reflexes, and balance through fun,
+              expert-led training sessions on wheels.
             </p>
           </AnimatedCard>
 
@@ -121,7 +131,8 @@ export default function BeyondAcademicsPage() {
             <div className="text-4xl mb-4">♟️</div>
             <h3 className="text-xl font-bold mb-3 text-slate-900">Chess</h3>
             <p className="text-slate-600 text-sm">
-              Stimulates logical reasoning, problem-solving, and patience, helping students think steps ahead.
+              Stimulates logical reasoning, problem-solving, and patience,
+              helping students think steps ahead.
             </p>
           </AnimatedCard>
 
@@ -129,7 +140,8 @@ export default function BeyondAcademicsPage() {
             <div className="text-4xl mb-4">🎯</div>
             <h3 className="text-xl font-bold mb-3 text-slate-900">Carroms</h3>
             <p className="text-slate-600 text-sm">
-              Refines hand-eye coordination, precision, and strategic thinking in a fun, friendly indoor environment.
+              Refines hand-eye coordination, precision, and strategic thinking
+              in a fun, friendly indoor environment.
             </p>
           </AnimatedCard>
 
@@ -137,7 +149,8 @@ export default function BeyondAcademicsPage() {
             <div className="text-4xl mb-4">🏏</div>
             <h3 className="text-xl font-bold mb-3 text-slate-900">Cricket</h3>
             <p className="text-slate-600 text-sm">
-              Teaches batting, bowling, and teamwork, fostering discipline and cooperative game strategies.
+              Teaches batting, bowling, and teamwork, fostering discipline and
+              cooperative game strategies.
             </p>
           </AnimatedCard>
 
@@ -145,15 +158,19 @@ export default function BeyondAcademicsPage() {
             <div className="text-4xl mb-4">⚽</div>
             <h3 className="text-xl font-bold mb-3 text-slate-900">Football</h3>
             <p className="text-slate-600 text-sm">
-              Builds endurance, speed, and strategic thinking while playing and mastering team coordination on the field.
+              Builds endurance, speed, and strategic thinking while playing and
+              mastering team coordination on the field.
             </p>
           </AnimatedCard>
 
           <AnimatedCard delay={0.5} className="hover:bg-orange-50">
             <div className="text-4xl mb-4">🏀</div>
-            <h3 className="text-xl font-bold mb-3 text-slate-900">Basketball</h3>
+            <h3 className="text-xl font-bold mb-3 text-slate-900">
+              Basketball
+            </h3>
             <p className="text-slate-600 text-sm">
-              Improves agility, physical conditioning, and spatial awareness with dribbling and shooting practice.
+              Improves agility, physical conditioning, and spatial awareness
+              with dribbling and shooting practice.
             </p>
           </AnimatedCard>
 
@@ -161,7 +178,8 @@ export default function BeyondAcademicsPage() {
             <div className="text-4xl mb-4">💃</div>
             <h3 className="text-xl font-bold mb-3 text-slate-900">Dance</h3>
             <p className="text-slate-600 text-sm">
-              Expresses emotion and creativity through movement, learning various traditional and contemporary styles.
+              Expresses emotion and creativity through movement, learning
+              various traditional and contemporary styles.
             </p>
           </AnimatedCard>
 
@@ -169,7 +187,8 @@ export default function BeyondAcademicsPage() {
             <div className="text-4xl mb-4">🎨</div>
             <h3 className="text-xl font-bold mb-3 text-slate-900">Art</h3>
             <p className="text-slate-600 text-sm">
-              Nurtures creative self-expression and fine motor skills through drawing, clay modelling, and painting.
+              Nurtures creative self-expression and fine motor skills through
+              drawing, clay modelling, and painting.
             </p>
           </AnimatedCard>
         </div>
@@ -207,11 +226,11 @@ export default function BeyondAcademicsPage() {
             </div>
             <div className="aspect-square relative overflow-hidden bg-slate-300 rounded-2xl flex items-center justify-center text-slate-500">
               <Image
-                src="/drawing.jpg"
+                src="/draw.jpeg"
                 alt="Smart Ecosystem"
                 fill
-                sizes="(max-width: 768px) 50vw, 25vw"
-                className="object-cover"
+                sizes="(max-width: 768px) 50vw, 50vw"
+                className="object-cover object-bottom"
               />
             </div>
           </div>
@@ -287,7 +306,9 @@ export default function BeyondAcademicsPage() {
 
           {/* Item 2: anual-2.jpg */}
           <div className="relative bg-white p-4 pb-8 shadow-xl border border-slate-200/30 rounded-xs rotate-3 hover:rotate-0 hover:-translate-y-4 hover:scale-[1.02] hover:z-20 transition-all duration-300 group cursor-pointer">
-            <div className="absolute -top-4 left-1/2 -translate-x-1/2 text-2xl z-10 filter drop-shadow-xs select-none">📌</div>
+            <div className="absolute -top-4 left-1/2 -translate-x-1/2 text-2xl z-10 filter drop-shadow-xs select-none">
+              📌
+            </div>
             <div className="relative aspect-[4/3] w-full overflow-hidden bg-slate-100 rounded-sm mb-4">
               <Image
                 src="/anual-2.jpg"
@@ -321,13 +342,18 @@ export default function BeyondAcademicsPage() {
 
           {/* Sticky Note 1: Yellow paper */}
           <div className="relative bg-yellow-100/90 backdrop-blur-2xs p-6 shadow-xl rounded-sm border-l-4 border-yellow-400 rotate-2 hover:rotate-0 hover:-translate-y-4 hover:scale-[1.02] hover:z-20 transition-all duration-300 cursor-pointer flex flex-col justify-between aspect-[4/3]">
-            <div className="absolute -top-4 left-1/2 -translate-x-1/2 text-2xl z-10 filter drop-shadow-xs select-none">📌</div>
+            <div className="absolute -top-4 left-1/2 -translate-x-1/2 text-2xl z-10 filter drop-shadow-xs select-none">
+              📌
+            </div>
             <div className="grow flex flex-col justify-center text-center">
               <p className="font-mono text-slate-800 text-sm font-semibold leading-relaxed">
-                "To dance is to be out of yourself. Larger, more beautiful, more powerful."
+                "To dance is to be out of yourself. Larger, more beautiful, more
+                powerful."
               </p>
             </div>
-            <p className="font-mono text-xs text-slate-500 text-right mt-4">— Agnes de Mille</p>
+            <p className="font-mono text-xs text-slate-500 text-right mt-4">
+              — Agnes de Mille
+            </p>
           </div>
 
           {/* Item 4: anual-4.jpg */}
@@ -349,7 +375,9 @@ export default function BeyondAcademicsPage() {
 
           {/* Item 5: anual-5.jpg */}
           <div className="relative bg-white p-4 pb-8 shadow-xl border border-slate-200/30 rounded-xs -rotate-4 hover:rotate-0 hover:-translate-y-4 hover:scale-[1.02] hover:z-20 transition-all duration-300 group cursor-pointer">
-            <div className="absolute -top-4 left-1/2 -translate-x-1/2 text-2xl z-10 filter drop-shadow-xs select-none">📌</div>
+            <div className="absolute -top-4 left-1/2 -translate-x-1/2 text-2xl z-10 filter drop-shadow-xs select-none">
+              📌
+            </div>
             <div className="relative aspect-[4/3] w-full overflow-hidden bg-slate-100 rounded-sm mb-4">
               <Image
                 src="/anual-5.jpg"
@@ -383,18 +411,24 @@ export default function BeyondAcademicsPage() {
 
           {/* Sticky Note 2: Pink paper */}
           <div className="relative bg-pink-100/90 backdrop-blur-2xs p-6 shadow-xl rounded-sm border-l-4 border-pink-400 -rotate-3 hover:rotate-0 hover:-translate-y-4 hover:scale-[1.02] hover:z-20 transition-all duration-300 cursor-pointer flex flex-col justify-between aspect-[4/3]">
-            <div className="absolute -top-4 left-1/2 -translate-x-1/2 text-2xl z-10 filter drop-shadow-xs select-none">📌</div>
+            <div className="absolute -top-4 left-1/2 -translate-x-1/2 text-2xl z-10 filter drop-shadow-xs select-none">
+              📌
+            </div>
             <div className="grow flex flex-col justify-center text-center">
               <p className="font-mono text-slate-800 text-sm font-semibold leading-relaxed">
                 "Art washes away from the soul the dust of everyday life."
               </p>
             </div>
-            <p className="font-mono text-xs text-slate-500 text-right mt-4">— Pablo Picasso</p>
+            <p className="font-mono text-xs text-slate-500 text-right mt-4">
+              — Pablo Picasso
+            </p>
           </div>
 
           {/* Item 7: dance.jpg */}
           <div className="relative bg-white p-4 pb-8 shadow-xl border border-slate-200/30 rounded-xs -rotate-2 hover:rotate-0 hover:-translate-y-4 hover:scale-[1.02] hover:z-20 transition-all duration-300 group cursor-pointer">
-            <div className="absolute -top-4 left-1/2 -translate-x-1/2 text-2xl z-10 filter drop-shadow-xs select-none">📌</div>
+            <div className="absolute -top-4 left-1/2 -translate-x-1/2 text-2xl z-10 filter drop-shadow-xs select-none">
+              📌
+            </div>
             <div className="relative aspect-[4/3] w-full overflow-hidden bg-slate-100 rounded-sm mb-4">
               <Image
                 src="/dance.jpg"

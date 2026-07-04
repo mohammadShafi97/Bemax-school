@@ -111,6 +111,13 @@ const galleryData: MediaItem[] = [
     category: "Academics",
     caption: "Group picture with the MD and principal",
   },
+  {
+    id: 35,
+    type: "image",
+    src: "/lab.jpeg",
+    category: "Academics",
+    caption: "Science Lab",
+  },
 
   // Extracurriculars
   {
@@ -145,6 +152,13 @@ const galleryData: MediaItem[] = [
     id: 14,
     type: "image",
     src: "/drawing.jpg",
+    category: "Extracurriculars",
+    caption: "Drawing and painting sessions.",
+  },
+  {
+    id: 28,
+    type: "image",
+    src: "/draw.jpeg",
     category: "Extracurriculars",
     caption: "Drawing and painting sessions.",
   },
